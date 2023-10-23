@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Smith",
+      "username": "jsmith",
+      "email": "jsmith@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Emily Johnson",
+      "username": "ejohnson",
+      "email": "ejohnson@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Michael Brown",
+      "username": "mbrown",
+      "email": "mbrown@example.com"
+    },
+    {
+      "id": 4,
+      "name": "Sarah Davis",
+      "username": "sdavis",
+      "email": "sdavis@example.com"
+    },
+    {
+      "id": 5,
+      "name": "David Garcia",
+      "username": "dgarcia",
+      "email": "dgarcia@example.com"
+    },
+    {
+      "id": 6,
+      "name": "Jessica Rodriguez",
+      "username": "jrodriguez",
+      "email": "jrodriguez@example.com"
+    },
+    {
+      "id": 7,
+      "name": "James Martinez",
+      "username": "jmartinez",
+      "email": "jmartinez@example.com"
+    },
+    {
+      "id": 8,
+      "name": "Linda Hernandez",
+      "username": "lhernandez",
+      "email": "lhernandez@example.com"
+    },
+    {
+      "id": 9,
+      "name": "Matthew Wilson",
+      "username": "mwilson",
+      "email": "mwilson@example.com"
+    },
+    {
+      "id": 10,
+      "name": "Amanda Anderson",
+      "username": "aanderson",
+      "email": "aanderson@example.com"
+    }
+  ]
+}
