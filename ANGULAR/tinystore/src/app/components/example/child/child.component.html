@@ -1,0 +1,9 @@
+<div style="margin: 10%">
+  <button (click)="setMap()">set to store setMap</button>
+  <button (click)="add('blee')">add to store setMap</button>
+  <button (click)="remove('blee', 1)">remove to store setMap</button>
+  <button (click)="removeByKey('blee', 'text', 'blee: 2')">remove to store setMap</button>
+
+  <span>{{ blee | json }}</span>
+  <!-- <span>{{ blee$ | async | json }}</span> -->
+</div>

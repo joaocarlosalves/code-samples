@@ -1,0 +1,11 @@
+<details
+  [class.rounded]="radius"
+  [class.border]="bordered"
+  [class.border-bottom]="bottom">
+  <summary
+    [attr.marker]="opened"
+    [attr.marker-before]="closed">
+    {{ title }}
+  </summary>
+  <ng-content></ng-content>
+</details>
