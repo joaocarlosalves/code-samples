@@ -1,0 +1,30 @@
+{
+  "datepicker": {
+    "en": {
+      "today": "Today",
+      "noDate": "Please, insert a date",
+      "invalidDate": "Please, insert a valid date",
+      "invalidDay": "Invalid day",
+      "invalidMonth": "Invalid month",
+      "notAllowed": "Date not allowed",
+      "notBefore": "Date can't be before:",
+      "notAfter": "Date can't be after:",
+      "notWeekend": "Weekends days aren't allowed",
+      "week": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    },
+    "pt": {
+      "today": "Hoje",
+      "noDate": "Por favor, insira uma data",
+      "invalidDate": "Por favor, insira uma data válida",
+      "invalidDay": "Dia inválido",
+      "invalidMonth": "Mês inválido",
+      "notAllowed": "Data nao permitida",
+      "notBefore": "Data não pode ser antes de:",
+      "notAfter": "Data não pode ser após:",
+      "notWeekend": "Não é permitido finais de semana",
+      "week": ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"],
+      "months": ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+    }
+  }
+}
