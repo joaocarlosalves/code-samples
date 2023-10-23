@@ -1,0 +1,15 @@
+[
+  {"year": 1900, "population": 1600000000},
+  {"year": 1910, "population": 1750000000},
+  {"year": 1920, "population": 1860000000},
+  {"year": 1930, "population": 2070000000},
+  {"year": 1940, "population": 2300000000},
+  {"year": 1950, "population": 2520000000},
+  {"year": 1960, "population": 3020000000},
+  {"year": 1970, "population": 3690000000},
+  {"year": 1980, "population": 4430000000},
+  {"year": 1990, "population": 5280000000},
+  {"year": 2000, "population": 6080000000},
+  {"year": 2010, "population": 6940000000},
+  {"year": 2020, "population": 7790000000}
+]
