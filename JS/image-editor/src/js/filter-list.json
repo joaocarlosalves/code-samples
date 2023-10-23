@@ -1,0 +1,11 @@
+[
+    { "id": "blur", "slug": "px", "min": "0", "max": "25", "value": "0" },
+    { "id": "brightness", "slug": "%", "min": "0", "max": "100", "value": "100" },
+    { "id": "contrast", "slug": "%", "min": "0", "max": "100", "value": "100" },
+    { "id": "grayscale", "slug": "%", "min": "0", "max": "100", "value": "0" },
+    { "id": "hue-rotate", "slug": "deg", "min": "0", "max": "360", "value": "0" },
+    { "id": "invert", "slug": "%", "min": "0", "max": "100", "value": "0" },
+    { "id": "opacity", "slug": "%", "min": "0", "max": "100", "value": "100" },
+    { "id": "saturate", "slug": "%", "min": "0", "max": "100", "value": "100" },
+    { "id": "sepia", "slug": "%", "min": "0", "max": "100", "value": "0" }
+]

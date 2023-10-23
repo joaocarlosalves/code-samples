@@ -1,0 +1,55 @@
+[   
+    {
+        "id": "filters",
+        "menu": [
+            "blur",
+            "brightness",
+            "contrast",
+            "grayscale",
+            "hue-rotate",
+            "invert",
+            "opacity",
+            "saturate",
+            "sepia"
+        ]
+    },
+    {
+        "id": "blend-mode",
+        "menu": [
+            "color",
+            "color-burn",
+            "color-dodge",
+            "darken",
+            "difference",
+            "exclusion",
+            "hard-light",
+            "hue",
+            "lighten",
+            "luminosity",
+            "multiply",
+            "normal",
+            "overlay",
+            "saturation",
+            "screen",
+            "soft-light"
+        ]
+    },
+    {
+        "id": "background",
+        "menu": [
+            "background-color",
+            "background-gradient"
+        ]
+    },
+    {
+        "id": "borders",
+        "menu": ["border-color"]
+    },
+    {
+        "id": "overlay",
+        "menu": [
+            "overlay-color",
+            "overlay-gradient"
+        ]
+    }
+]
