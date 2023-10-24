@@ -1,0 +1,20 @@
+<div
+  class='check-list full block relative'
+  [class.border]="border"
+  [class.check-list-right]="right">
+  <ul>
+    <li
+      *ngFor='let item of list; let i = index'
+      center gap-10px
+      class="{{ getChecked(item.id) > 0 ? 'check-list-checked' : '' }}">
+      <icon
+        centered
+        style="width: 15px"
+        [class.ml-10px]="right"
+        [ngClass]="getChecked(item.id) > 0 ? 'color-success'  : 'color-red'"
+        icon="{{ getChecked(item.id) > 0 ? 'check' : 'close' }}">
+      </icon>
+      <div [class.ml-5px]="!right">{{ item.text }}</div>
+    </li>
+  </ul>
+</div>

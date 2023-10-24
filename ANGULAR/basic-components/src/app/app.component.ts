@@ -14,5 +14,13 @@ export class AppComponent {
     { "text": "SWIFT Automático", "value": "valor-3" },
     { "text": "SWIFT Manual", "value": "valor-4" }
   ];
+
+  list = [
+    { id: 1, text: "Do something to Start" },
+    { id: 2, text: "Do something to Continue" },
+    { id: 3, text: "Do something to Restart" },
+    { id: 4, text: "Do something to Finish" },
+  ];
+
   getActiveButton(event: any) { console.log(event) }
 }

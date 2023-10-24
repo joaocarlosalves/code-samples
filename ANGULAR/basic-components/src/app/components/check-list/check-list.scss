@@ -1,0 +1,25 @@
+/***** Checklist *****/
+.check-list ul li {
+  width: 100%;
+  padding: 5px 15px 5px 5px;
+  display: flex;
+  justify-content: flex-start;
+  color: var(--gray);
+  text-align: left;
+  margin-bottom: 5px
+}
+.check-list.border ul li { border-bottom: 1px solid var(--disabled) }
+.check-list ul li:last-child { border: none }
+.check-list-checked,
+.check-list-checked div {
+  color: var(--success);
+  font-weight: bold
+}
+.check-list p-icon { width: 30px }
+.check-list-index { font-weight: bold }
+.check-list-right ul li {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 8px 5px 8px 5px
+}
+/***** Checklist - END *****/

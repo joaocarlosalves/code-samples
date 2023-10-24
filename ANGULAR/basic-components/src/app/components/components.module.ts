@@ -7,11 +7,13 @@ import { FlagModule } from './flag/flag.module';
 import { GroupButtonsModule } from './group-buttons/group-buttons.module';
 import { IconModule } from './icon/icon-module';
 import { SnackBarModule } from './snack-bar/snack-bar.module';
+import { CheckListModule } from './check-list/check-list.module';
 
 @NgModule({
   imports: [
     CommonModule,
     AccordionModule,
+    CheckListModule,
     CountrySelectModule,
     DetailsListModule,
     FlagModule,
@@ -21,6 +23,7 @@ import { SnackBarModule } from './snack-bar/snack-bar.module';
   ],
   exports: [
     AccordionModule,
+    CheckListModule,
     CountrySelectModule,
     DetailsListModule,
     GroupButtonsModule,

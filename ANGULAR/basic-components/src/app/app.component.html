@@ -1,9 +1,23 @@
-<group-buttons [buttons]="buttons"></group-buttons>
+<div p-20px>
+  <div w-min mt-20px>
+    <group-buttons [buttons]="buttons"></group-buttons>
+  </div>
 
-<snackbar bottom>Text</snackbar>
+  <snackbar bottom>Text</snackbar>
 
-<accordion title="Trigger">Content</accordion>
+  <div w-min mt-20px>
+    <accordion title="Trigger">Content</accordion>
+  </div>
 
-<icon icon="gear"></icon>
+  <div w-min mt-20px>
+    <icon icon="gear"></icon>
+  </div>
 
-<flag flag="br"></flag>
+  <div w-min mt-20px>
+    <flag flag="br"></flag>
+  </div>
+
+  <div w-min mt-40px>
+    <check-list [list]="list"></check-list>
+  </div>
+</div>
