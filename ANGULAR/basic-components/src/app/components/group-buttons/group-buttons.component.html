@@ -1,0 +1,7 @@
+<div flex group-buttons mb-30px>
+  <button
+    *ngFor="let btn of buttons; let i = index"
+    [class.active-btn]="activeBtn === i"
+    (click)="setActiveButton(i)"
+  >{{ btn.text }}</button>
+</div>

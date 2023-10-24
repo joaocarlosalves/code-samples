@@ -1,0 +1,22 @@
+/***** Snack Bar *****/
+.snackbar {
+  background-color: orangered;
+  min-width: 400px;
+  padding: 5px 10px 5px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+  color: white;
+  box-sizing: border-box;
+}
+.snackbar button {
+  opacity: .8;
+  font-size: 13px;
+  font-weight: normal;
+  background-color: transparent;
+  width: fit-content;
+  padding: 10px;
+}
+.snackbar span, .snackbar button { color: inherit }
+.snackbar.snackbar-bottom, .snackbar.snackbar-top { margin-left: -200px; left: 50% }
+.snackbar.snackbar-right, .snackbar.snackbar-left { margin-top: -30px; top: 50% }
+/***** Snack Bar - END *****/

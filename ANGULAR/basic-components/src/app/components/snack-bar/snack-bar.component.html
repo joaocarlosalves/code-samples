@@ -1,0 +1,7 @@
+<div #snackbar center class="snackbar fixed zi-99 center space-between" [ngClass]="classList">
+  <div center class="center gap-10px justify-between">
+    <div>{{ text }}<ng-content></ng-content></div>
+  </div>
+
+  <button *ngIf='!noButton' (click)='setClose()'>{{ buttonText || 'OK' }}</button>
+</div>

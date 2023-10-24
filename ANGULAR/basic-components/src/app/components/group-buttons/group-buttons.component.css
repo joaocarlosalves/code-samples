@@ -1,0 +1,26 @@
+[group-buttons] {
+  border-radius: 101px;
+  border: 1px solid #424455;
+  width: fit-content;
+}
+[group-buttons] button {
+  font-size: 12px;
+  height: 22px;
+  line-height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  border: none;
+  border-right: 1px solid #424455;
+  background: #fff;
+  color: #424455;
+  font-weight: bold;
+  letter-spacing: -.5px;
+}
+[group-buttons] button.active-btn, [group-buttons] button:hover {
+  background-color: #424455;
+  color: #fff;
+}
+[group-buttons] button:first-child { border-radius: 100px 0 0 100px }
+[group-buttons] button:last-child { border-radius: 0 100px 100px 0; border-right: none }

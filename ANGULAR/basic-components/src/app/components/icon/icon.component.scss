@@ -1,0 +1,10 @@
+@import url('./font-awesome/v4/font-awesome.scss');
+@import url('./font-awesome/v6/font-awesome.scss');
+
+i.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+  height: min-content;
+}

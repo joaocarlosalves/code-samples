@@ -1,0 +1,23 @@
+<div border-1 border-gray-3 rounded country-select-box>
+  <div country-select-header sticky gap-10px flex space-between full>
+    <div>
+      <label>Digite o país:</label>
+      <input type="text" />
+    </div>
+
+    <div flex gap-10px space-between>
+      <span>=</span>
+      <span>=</span>
+    </div>
+  </div>
+
+  <ul class='column' country-select-list full flex space-between gap-10px >
+    <li *ngFor="let c of countriesList"
+      class='row' gap-10px full border-1 border-gray-3 rounded>
+      <div>
+        <img src="https://bootystrip.com/icons/countries/countries.ad.png">
+      </div>
+      <span>{{ c.name }}</span>
+    </li>
+  </ul>
+</div>
