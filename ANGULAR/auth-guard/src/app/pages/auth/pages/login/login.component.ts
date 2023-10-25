@@ -1,23 +1,20 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit, OnDestroy {
-  constructor(private authService: AuthService) {}
-
-  ngOnInit() {
-    this.authService.isAuthenticated().subscribe((l) => console.log(l))
-  }
-
-  ngOnDestroy() {
-    this.authService.isAuthenticated().subscribe().unsubscribe();
-  }
+export class LoginComponent {
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   doLogin() {
     this.authService.login();
+    setTimeout(() => this.router.navigate(['/']), 100);
   }
 }
