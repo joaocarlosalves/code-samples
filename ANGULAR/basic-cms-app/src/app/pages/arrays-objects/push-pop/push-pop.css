@@ -1,0 +1,10 @@
+input[type='text'] { max-width: 300px }
+.list-item {
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all .2s ease-in-out;
+  font-weight: bold
+}
+.list-item:hover { background-color: var(--yellow) }
+.list-container { max-height: 300px }

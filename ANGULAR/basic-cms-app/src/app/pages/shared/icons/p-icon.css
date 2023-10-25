@@ -1,0 +1,10 @@
+@import url('../../../assets/font-awesome/v6/font-awesome.css');
+@import url('../../../assets/font-awesome/v4/font-awesome.css');
+
+i.p-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+  height: min-content;
+}

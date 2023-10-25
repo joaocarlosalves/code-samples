@@ -1,0 +1,108 @@
+/***** Accordion / Colapse *****/
+.p-accordion {
+  width: 100%;
+  min-height: 45px;
+  padding: 0 0 0 0;
+  display: flex;
+  flex-direction: column
+}
+.p-accordion.p-accordion-full-border.success, .p-accordion-multiple.success
+.p-accordion.p-accordion-full-border { background: var(--white) }
+.p-accordion-trigger, .p-accordion.trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transition: all .2s ease;
+  padding: .7rem;
+  align-items: center;
+  cursor: pointer
+}
+.p-accordion-content {
+  cursor: pointer;
+  transition: all .2s ease;
+  width: 100%;
+  padding: .7rem;
+  animation: p-accordion-content 0.1s normal forwards;
+  background-color: var(--white)
+}
+.p-accordion-title { font-weight: bold }
+.p-accordion { border-bottom: 1px solid var(--disabled) }
+.p-accordion.primary, .p-accordion-multiple.primary .p-accordion { border-bottom: 1px solid var(--primary) }
+.p-accordion.secondary, .p-accordion-multiple.secondary .p-accordion { border-bottom: 1px solid var(--secondary) }
+.p-accordion.success, .p-accordion-multiple.success .p-accordion { border-bottom: 1px solid var(--success) }
+.p-accordion.error, .p-accordion-multiple.error .p-accordion { border-bottom: 1px solid var(--error) }
+.p-accordion.warning, .p-accordion-multiple.warning .p-accordion { border-bottom: 1px solid var(--warning) }
+.p-accordion.disabled, .p-accordion-multiple.disabled .p-accordion { border-bottom: 1px solid var(--disabled) }
+.p-accordion.purple, .p-accordion-multiple.purple .p-accordion { border-bottom: 1px solid var(--purple) }
+.p-accordion.green, .p-accordion-multiple.green .p-accordion { border-bottom: 1px solid var(--green) }
+.p-accordion.dark, .p-accordion-multiple.dark .p-accordion { border-bottom: 1px solid var(--dark) }
+.p-accordion.black, .p-accordion-multiple.black .p-accordion { border-bottom: 1px solid var(--black) }
+.p-accordion.gray, .p-accordion-multiple.gray .p-accordion { border-bottom: 1px solid var(--gray) }
+.p-accordion.white, .p-accordion-multiple.white .p-accordion { border-bottom: 1px solid var(--white) }
+.p-accordion.orange, .p-accordion-multiple.orange .p-accordion { border-bottom: 1px solid var(--orange) }
+.p-accordion.yellow, .p-accordion-multiple.yellow .p-accordion { border-bottom: 1px solid var(--yellow) }
+.p-accordion.blue, .p-accordion-multiple.blue .p-accordion { border-bottom: 1px solid var(--blue) }
+.p-accordion.red, .p-accordion-multiple.red .p-accordion { border-bottom: 1px solid var(--red) }
+.p-accordion.p-accordion-full-border.primary  { border: 1px solid var(--primary) }
+.p-accordion.p-accordion-full-border.secondary { border: 1px solid var(--secondary) }
+.p-accordion.p-accordion-full-border.error { border: 1px solid var(--error) }
+.p-accordion.p-accordion-full-border.red { border: 1px solid var(--red) }
+.p-accordion.p-accordion-full-border.warning { border: 1px solid var(--warning) }
+.p-accordion.p-accordion-full-border.disabled { border: 1px solid var(--disabled) }
+.p-accordion.p-accordion-full-border.dark { border: 1px solid var(--dark) }
+.p-accordion.p-accordion-full-border.gray { border: 1px solid var(--gray) }
+.p-accordion.p-accordion-full-border.black { border: 1px solid var(--black) }
+.p-accordion.p-accordion-full-border.white { border: 1px solid var(--white) }
+.p-accordion.p-accordion-full-border.blue { border: 1px solid var(--blue) }
+.p-accordion.p-accordion-full-border.purple { border: 1px solid var(--purple) }
+.p-accordion.p-accordion-full-border.green { border: 1px solid var(--green) }
+.p-accordion.p-accordion-full-border.orange { border: 1px solid var(--orange) }
+.p-accordion.p-accordion-full-border.yellow { border: 1px solid var(--yellow) }
+.p-accordion.p-accordion-full-border.success { border: 1px solid var(--success) }
+.p-accordion-no-border { border: none!important }
+.p-accordion-trigger.p-accordion-no-padding { padding: .7rem 0 }
+.p-accordion-content.p-accordion-no-padding { padding: 0 }
+.p-accordion-pb15px { padding-bottom: 15px!important }
+.p-accordion.primary .p-accordion-title, .p-accordion.primary .p-accordion-trigger p-icon, p-icon i.primary { color: var(--primary) }
+.p-accordion.secondary .p-accordion-title, .p-accordion.secondary .p-accordion-trigger p-icon, p-icon i.secondary { color: var(--secondary) }
+.p-accordion.success .p-accordion-title, .p-accordion.success .p-accordion-trigger p-icon, p-icon i.success { color: var(--success) }
+.p-accordion.error .p-accordion-title, .p-accordion.error .p-accordion-trigger p-icon, p-icon i.error { color: var(--error) }
+.p-accordion.warning .p-accordion-title, .p-accordion.warning .p-accordion-trigger p-icon, p-icon i.warning { color: var(--warning) }
+.p-accordion.disabled .p-accordion-title, .p-accordion.disabled .p-accordion-trigger p-icon, p-icon i.disabled { color: var(--disabled) }
+.p-accordion.red .p-accordion-title, .p-accordion.red .p-accordion-trigger p-icon, p-icon i.red { color: var(--red) }
+.p-accordion.purple .p-accordion-title, .p-accordion.purple .p-accordion-trigger p-icon, p-icon i.purple { color: var(--purple) }
+.p-accordion.green .p-accordion-title, .p-accordion.green .p-accordion-trigger p-icon, p-icon i.green { color: var(--green) }
+.p-accordion.dark .p-accordion-title, .p-accordion.dark .p-accordion-trigger p-icon, p-icon i.dark { color: var(--dark) }
+.p-accordion.black .p-accordion-title, .p-accordion.black .p-accordion-trigger p-icon, p-icon i.black { color: var(--black) }
+.p-accordion.gray .p-accordion-title, .p-accordion.gray .p-accordion-trigger p-icon, p-icon i.gray { color: var(--gray) }
+.p-accordion.white .p-accordion-title, .p-accordion.white .p-accordion-trigger p-icon, p-icon i.white { color: var(--white) }
+.p-accordion.orange .p-accordion-title, .p-accordion.orange .p-accordion-trigger p-icon, p-icon i.orange { color: var(--orange) }
+.p-accordion.yellow .p-accordion-title, .p-accordion.yellow .p-accordion-trigger p-icon, p-icon i.yellow { color: var(--yellow) }
+.p-accordion.blue .p-accordion-title, .p-accordion.blue .p-accordion-trigger p-icon, p-icon i.blue { color: var(--blue) }
+.p-accordion.rounded .p-accordion-content { border-radius: 4px }
+.p-accordion.p-accordion-full-border { margin-top: 5px }
+.p-accordion.primary .p-accordion-triangle { border-top: 7px solid var(--primary) }
+.p-accordion.secondary .p-accordion-triangle { border-top: 7px solid var(--secondary) }
+.p-accordion.error .p-accordion-triangle { border-top: 7px solid var(--error) }
+.p-accordion.warning .p-accordion-triangle { border-top: 7px solid var(--warning) }
+.p-accordion.success .p-accordion-triangle { border-top: 7px solid var(--success) }
+.p-accordion.disabled .p-accordion-triangle { border-top: 7px solid var(--disabled) }
+.p-accordion.dark .p-accordion-triangle { border-top: 7px solid var(--dark) }
+.p-accordion.gray .p-accordion-triangle { border-top: 7px solid var(--gray) }
+.p-accordion.blue .p-accordion-triangle { border-top: 7px solid var(--blue) }
+.p-accordion.orange .p-accordion-triangle { border-top: 7px solid var(--orange) }
+.p-accordion.yellow .p-accordion-triangle { border-top: 7px solid var(--yellow) }
+.p-accordion.white .p-accordion-triangle { border-top: 7px solid var(--white) }
+.p-accordion.black .p-accordion-triangle { border-top: 7px solid var(--black) }
+.p-accordion.purple .p-accordion-triangle { border-top: 7px solid var(--purple) }
+@keyframes p-accordion-content {
+  0% {
+    height: 0;
+    opacity: 0
+  }
+  100% {
+    min-height: 45px;
+    opacity: 1
+  }
+}
+/***** Accordion / Colapse - END *****/

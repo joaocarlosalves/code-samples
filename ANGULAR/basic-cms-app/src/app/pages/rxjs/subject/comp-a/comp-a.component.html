@@ -1,0 +1,20 @@
+<div class="subject-form">
+  <form>
+     <div class='input-line'>
+        <label class="b">TITLE</label>
+        <input type='text' [(ngModel)]="title" name="title" (keyup)='validPost()' />
+     </div>
+
+     <div class='input-line'>
+        <label class="b">AUTHOR</label>
+        <input type='text' [(ngModel)]="author" name="author" (keyup)='validPost()' />
+     </div>
+
+     <div class='input-line'>
+        <label class="b">LINK</label>
+        <input type='text' [(ngModel)]="link" name="link" (keyup)='validPost()' />
+     </div>
+
+     <button class="p-button regular full" [disabled]="!valid" (click)='submitPost()'>NEW POST</button>
+  </form>
+</div>

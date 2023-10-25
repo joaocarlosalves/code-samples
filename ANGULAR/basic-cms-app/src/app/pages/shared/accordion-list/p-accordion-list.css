@@ -1,0 +1,33 @@
+/***** List Accordion *****/
+.p-accordion-list, .p-accordion-list li, li { width: 100% }
+.p-accordion-list li, li {
+  padding: 5px 0;
+  border-bottom: 1px solid var(--gray-30)
+}
+.p-accordion-list div { transition: all .2s ease }
+.p-accordion-list-opened { animation: p-accordion-list-open 0.4s normal both }
+.p-accordion-list-closed {
+  animation: p-accordion-list-close 0.4s normal both;
+  display: none
+}
+@keyframes p-accordion-list-open {
+  0% {
+    display: none;
+    opacity: 0
+  }
+  100% {
+    display: block;
+    opacity: 1
+  }
+}
+@keyframes p-accordion-list-close {
+  0% {
+    display: block;
+    opacity: 1
+  }
+  100% {
+    display: none;
+    opacity: 0
+  }
+}
+/***** List Accordion - END *****/

@@ -1,0 +1,63 @@
+<table
+  [class.p-table-striped]='striped'
+  [class.p-mini-table]='mini'
+  [class.p-micro-table]='micro'
+  [class.zoom]='zoom'
+  [class.center-table]='center'
+  class="p-table {{ border }}">
+  <thead
+    [class.rounded]='rounded'
+    [style]='"background-color: var(--"+ headercolor +"); color: black; height: 35px"'>
+    <tr>
+      <th
+        scope='col'
+        *ngFor="let header of headers"
+        class='{{ header.id }}'>
+        <div class='center'>
+          <span [class.color-white]='headercolor !== undefined' class='{{ headerfontsize }}' style="font-size: 16px; font-weight: bold;">
+            {{ header.text }}
+          </span>
+
+          <button *ngIf="sort" class='table-icon-button' (click)="sortTable(updatedCells, header.id, header?.date, booleanValue)">
+          </button>
+        </div>
+      </th>
+      <th *ngIf='editRow && !doubleclickedit'></th>
+      <th *ngIf='deleteRow'></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let row of cells" (dblclick)='doubleclickedit && editThisRow(row)'>
+      <td scope='cell' *ngFor="let h of headers">
+        <span [class.bold]='bold' style="font-size: 14px" class='{{ cellfontsize }}'>{{ row[h.id] }}</span>
+      </td>
+
+      <td class='edit-delete-cell' *ngIf='editRow && !doubleclickedit'>
+        <button class='table-icon-button' (click)='editThisRow(row)'>
+        </button>
+
+        <span *ngIf='edittooltiptext !== undefined || edittooltiptext !== ""' class='p-table-tooltip'>
+          {{ edittooltiptext }}
+        </span>
+      </td>
+
+      <td class='edit-delete-cell' *ngIf='deleteRow'>
+        <button class='table-icon-button' (click)='deleteThisRow(row)'>
+        </button>
+
+        <span *ngIf='deletetooltiptext !== undefined || deletetooltiptext !== ""' class='p-table-tooltip'>
+          {{ deletetooltiptext }}
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ul *ngIf="pagination && pagesCounter > 1" class="p-pagination mt30px {{ headercolor }}">
+  <li *ngIf='firstlastpagination' (click)='firstPage()'>0</li>
+  <li (click)='prevPage()'>---</li>
+  <li *ngFor="let key of pages(pagesCounter); let i = index" (click)='goToPage(i + 1)' [class.p-pagination-active]="currentPage === i + 1">{{ i + 1 }}</li>
+  <li (click)='nextPage()'>---</li>
+  <li *ngIf='firstlastpagination' (click)='lastPage()'>0</li>
+</ul>

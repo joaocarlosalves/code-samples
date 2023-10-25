@@ -1,0 +1,20 @@
+<h4 class="page-title">Dates</h4>
+
+<p>Today [raw]: <b>{{ today }}</b></p>
+<p>Month [index 0-11]: <b>{{ month }}</b></p>
+<p>Month Number [index + 1]: <b>{{ month + 1 }}</b></p>
+<p>Month Name [list index]: <b>{{ monthsNames[month] }}</b></p>
+<p>Day: <b>{{ day }}</b></p>
+<p>Day of Week [index 0-6]: <b>{{ weekDay }}</b></p>
+<p>Day Name [list index]: <b>{{ daysNames[weekDay] }}</b></p>
+<p>Year: <b>{{ year }}</b></p>
+<br>
+
+<p>Formated Date [Format: <u>{{ format }}</u>]: <b>{{ formatedDate }}</b></p>
+<div class="flex center gap-10px">
+  Change Format:
+  <button class="p-button regular" (click)="setFormat('pt-BR')">dd/mm/yyyy</button>
+  <button class="p-button regular" (click)="setFormat('en-us')">mm/dd/yyyy</button>
+  <button class="p-button regular" (click)="setFormat('ja-jp')">yyyy/mm/dd</button>
+</div>
+

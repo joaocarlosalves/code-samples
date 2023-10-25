@@ -1,0 +1,29 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+  <div class='input-line'>
+    <label>Name</label>
+    <input type='text' formControlName="name" placeholder="Your name" />
+
+    <div class="color-red mb20px" *ngIf="f['name'].invalid && (f['name'].dirty || f['name'].touched)">
+      Please provide a name.
+    </div>
+  </div>
+
+  <div class='input-line'>
+    <label>Email</label>
+    <input type='email' formControlName="email" placeholder="Your email" />
+
+    <div class="color-red mb20px" *ngIf="f['email'].invalid && (f['email'].dirty || f['email'].touched)">
+      Please provide a valid email address.
+    </div>
+  </div>
+
+  <div class='input-line'>
+    <label>Phone</label>
+    <input type="text" formControlName="phone" />
+
+    <div class="color-red mb20px" *ngIf="f['phone'].invalid && (f['phone'].dirty || f['phone'].touched)">
+      Please provide a valid phone number.
+    </div>
+  </div>
+  <button class="p-button regular" type="submit" [disabled]="myForm.status === 'INVALID'">Send</button>
+</form>

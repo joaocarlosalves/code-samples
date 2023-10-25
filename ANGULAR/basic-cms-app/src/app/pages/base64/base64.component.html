@@ -1,0 +1,15 @@
+<h4 class="page-title">Base 64</h4>
+
+<div class="full flex column gap-30px">
+  <img [src]="imgSrc" *ngIf="imgSrc" width="200px" />
+
+  <button class="p-button regular" (click)='image.click()'>UPLOAD A IMAGE TO BASE64</button>
+
+  <input
+    type="file"
+    autocomplete="off"
+    style="display: none"
+    accept="jpg, jpeg, gif, png"
+    #image
+    (change)="selecFile($event)" />
+</div>

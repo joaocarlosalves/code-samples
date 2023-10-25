@@ -1,0 +1,28 @@
+/***** Tabs *****/
+.p-tab-header {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid var(--gray-40)
+}
+.p-tab {
+  display: flex;
+  padding: 5px 16px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--black);
+  margin-bottom: -1px;
+  transition: all .2s ease;
+  border-bottom: 2px solid transparent;
+  opacity: .5;
+}
+.p-tab-active.tab-primary, li.tab-primary:hover {
+  opacity: 1;
+  background: var(--cyan);
+  border-color: var(--black)
+}
+.p-tab span { color: inherit }
+.p-tab-header, .p-tab-content { width: 100% }
+.p-tab-content { margin-top: -1px }
+/***** Tabs - END *****/

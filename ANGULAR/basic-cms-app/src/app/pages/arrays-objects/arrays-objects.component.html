@@ -1,0 +1,13 @@
+<h4 class="page-title">Arrays / Objects</h4>
+
+<p-tabs>
+  <p-tabs-header left>
+    <p-tab primary (click)="tab = 1" [active]="tab === 1">Search Country</p-tab>
+    <p-tab primary (click)="tab = 2" [active]="tab === 2">Push / Pop</p-tab>
+    <p-tab primary (click)="tab = 3" [active]="tab === 3">Join / Concat</p-tab>
+  </p-tabs-header>
+
+  <p-tab-content *ngIf="tab === 1"><search-country></search-country></p-tab-content>
+  <p-tab-content *ngIf="tab === 2"><push-pop></push-pop></p-tab-content>
+  <p-tab-content *ngIf="tab === 3"><join-concat></join-concat></p-tab-content>
+</p-tabs>

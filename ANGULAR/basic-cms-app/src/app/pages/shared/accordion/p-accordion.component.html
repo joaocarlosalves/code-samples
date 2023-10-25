@@ -1,0 +1,29 @@
+<div
+  class='p-accordion {{ color }}'
+  [class.p-accordion-full-border]="border"
+  [class.p-accordion-no-border]="noBorder"
+  [class.rounded]="rounded">
+  <div
+    class='p-accordion-trigger'
+    [class.p-accordion-no-padding]="noPadding"
+    (click)='opened = !opened'>
+    <span class='p-accordion-title'>{{ triggerText || title || 'Click to open!' }}</span>
+
+    <p-icon
+      *ngIf="icon"
+      class="mr10px"
+      [color]='color'
+      [class.rotate180]="opened"
+      size="right"
+      solid
+      icon="{{ icon || 'angle-down' }}"></p-icon>
+  </div>
+  <div
+    *ngIf='opened'
+    class='p-accordion-content'
+    [class.p-accordion-pb15px]="noPadding && !noBorder"
+    [class.p-accordion-no-padding]="noPadding">
+      <ng-container *ngIf='content || text'>{{ content || text }}</ng-container>
+      <ng-content></ng-content>
+  </div>
+</div>
