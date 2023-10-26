@@ -15,6 +15,13 @@ const routes: Routes = [
   { path: 'pagination', loadChildren: () => import('examples/pagination/pagination.module').then(m => m.PaginationModule) },
   { path: 'popover', loadChildren: () => import('examples/popover/popover.module').then(m => m.PopoverModule) },
   { path: 'progressbar', loadChildren: () => import('examples/progressbar/progressbar.module').then(m => m.ProgressbarModule) },
+  { path: 'rating', loadChildren: () => import('examples/rating/rating.module').then(m => m.RatingModule) },
+  { path: 'scrollspy', loadChildren: () => import('examples/scrollspy/scrollspy.module').then(m => m.ScrollspyModule) },
+  { path: 'table', loadChildren: () => import('examples/table/table.module').then(m => m.TableModule) },
+  { path: 'timepicker', loadChildren: () => import('examples/timepicker/timepicker.module').then(m => m.TimepickerModule) },
+  { path: 'toast', loadChildren: () => import('examples/toast/toast.module').then(m => m.ToastModule) },
+  { path: 'tooltip', loadChildren: () => import('examples/tooltip/tooltip.module').then(m => m.TooltipModule) },
+  { path: 'typeahead', loadChildren: () => import('examples/typeahead/typeahead.module').then(m => m.TypeaheadModule) },
 ];
 
 @NgModule({

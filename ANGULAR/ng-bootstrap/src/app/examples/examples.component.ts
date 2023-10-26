@@ -7,9 +7,19 @@ import { menu } from './../data/menu';
 })
 export class ExamplesComponent implements OnInit {
   activeMenu: string = '';
+  page: string = '';
   menu: string[] = menu;
 
-  ngOnInit() { this.activeMenu = window.location.pathname }
+  ngOnInit() {
+    this.activeMenu = window.location.pathname;
+    this.pageTitle();
+  }
 
-  changeMenu(menu: string) { this.activeMenu = menu }
+  pageTitle() { this.page = this.activeMenu.replace('/', '').toUpperCase() }
+
+  changeMenu(menu: string) {
+    setTimeout(() => this.pageTitle(), 10)
+    this.activeMenu = menu;
+
+  }
 }

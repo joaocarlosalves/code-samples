@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-
+import { CommonModule, JsonPipe } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import { TimepickerRouterModule } from './timepicker-router';
+import { TimepickerComponent } from './timepicker.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [TimepickerComponent],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    FormsModule,
+    JsonPipe,
+    NgbTimepickerModule,
+    TimepickerRouterModule
+  ],
+  exports: [TimepickerComponent, TimepickerRouterModule]
 })
 export class TimepickerModule { }

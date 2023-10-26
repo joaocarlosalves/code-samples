@@ -10,8 +10,9 @@
 }
 
 :root {
-  --primary: #673ab7;
-  --secondary: #ffd740;
+  --primary: #8dffec;
+  --secondary: #7723ff;
+  --dark: #424242;
   --gray: #969696;
   --gray-light: #cbcbcb;
   --white: #ffffff;
@@ -19,8 +20,8 @@
 }
 
 ::-webkit-scrollbar { width: 18px; height: 18px }
-::-webkit-scrollbar-thumb { background: var(--primary) }
-::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background: var(--secondary) }
+::-webkit-scrollbar-thumb { background: var(--secondary) }
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background: transparent }
 
 ul { list-style: none }
 
@@ -111,9 +112,9 @@ main {
   width: 100%;
 
   h1 {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 45px;
-    color: var(--primary);
+    color: var(--dark);
     border-bottom: 1px solid var(--gray-light);
   }
 }
