@@ -1,0 +1,30 @@
+<main>
+  <aside>
+    <nav>
+      <menu>
+        <ul>
+          <li>
+            <a
+              routerLink=""
+              (click)="changeMenu('home')"
+              [class.active]="'home' === activeMenu || '' === activeMenu">
+              HOME
+            </a>
+          </li>
+          <li *ngFor="let m of menu">
+            <a
+              [routerLink]="m"
+              (click)="changeMenu(m)"
+              [class.active]="m === activeMenu">
+              {{ m | uppercase }}
+            </a>
+          </li>
+        </ul>
+      </menu>
+    </nav>
+  </aside>
+
+  <section class="main-content">
+    <router-outlet></router-outlet>
+  </section>
+</main>

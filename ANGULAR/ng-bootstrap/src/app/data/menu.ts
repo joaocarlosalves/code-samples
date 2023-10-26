@@ -1,0 +1,21 @@
+export const menu: string[] = [
+  "accordion",
+  "alert",
+  "carousel",
+  "collapse",
+  "datepicker",
+  "dropdown",
+  "modal",
+  "nav",
+  "offcanvas",
+  "pagination",
+  "popover",
+  "progressbar",
+  "rating",
+  "scrollspy",
+  "table",
+  "timepicker",
+  "toast",
+  "tooltip",
+  "typeahead"
+];
