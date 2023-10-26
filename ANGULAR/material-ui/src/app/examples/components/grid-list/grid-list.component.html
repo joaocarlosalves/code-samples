@@ -1,0 +1,30 @@
+<div class="page-container">
+  <h1>Grid List</h1>
+
+  <div class="page-content">
+    <!-- Grid List 1 -->
+    <div class='mb20px'>
+      <mat-grid-list cols="4" rowHeight="100px">
+        <mat-grid-tile
+            *ngFor="let tile of tiles"
+            [colspan]="tile.cols"
+            [rowspan]="tile.rows"
+            [style.background]="tile.color">
+          {{tile.text}}
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Grid List 2 -->
+    <div class='mt20px'>
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile [style.background]="'lightblue'">1</mat-grid-tile>
+        <mat-grid-tile [style.background]="'lightblue'">2</mat-grid-tile>
+        <mat-grid-tile [style.background]="'lightblue'">3</mat-grid-tile>
+        <mat-grid-tile [style.background]="'lightblue'">4</mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div class='home-list'>
+  <a *ngFor="let pg of pgs" [routerLink]="pg.path">
+    <img [src]="'https://material.angular.io/assets/screenshots/'+ pg.link +'.scene.png'" />
+    <h4>{{ pg.title }}</h4>
+  </a>
+</div>
+

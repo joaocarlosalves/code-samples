@@ -1,0 +1,54 @@
+<div class="page-container">
+  <h1>Autocomplete</h1>
+
+  <div class="page-content">
+    <form class="example-form" [formGroup]="stateForm">
+      <!-- Autocomplete 1 -->
+      <div class="mb20px">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Number</mat-label>
+          <input type="text" placeholder="Pick one" aria-label="Number" matInput
+            [formControl]="myControl" [matAutocomplete]="auto">
+
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+
+      <!-- Autocomplete 2 -->
+      <div class="mt20px mb20px">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Number</mat-label>
+            <input type="text" placeholder="Pick one"
+              aria-label="Number" matInput
+              [formControl]="myControl"
+              [matAutocomplete]="auto">
+
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{ option }}
+              </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+      </div>
+
+      <!-- Autocomplete 3 -->
+      <div class="mt20px">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>States Group</mat-label>
+          <input type="text" matInput formControlName="stateGroup"
+            required [matAutocomplete]="autoGroup">
+
+          <mat-autocomplete #autoGroup="matAutocomplete">
+            <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+                <mat-option *ngFor="let name of group.names" [value]="name">{{ name }}</mat-option>
+            </mat-optgroup>
+            </mat-autocomplete>
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+</div>

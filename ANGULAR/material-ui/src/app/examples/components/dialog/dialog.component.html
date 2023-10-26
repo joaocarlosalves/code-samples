@@ -1,0 +1,37 @@
+<div class="page-container">
+  <h1>Dialog</h1>
+
+  <div class="page-content">
+    <!-- Dialog 1 -->
+    <div class="mb20px">
+      <button mat-raised-button color="primary" (click)="openDialog()">Open Dialog 1</button>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Dialog 2 -->
+    <div class="mt20px mb20px">
+      <ul>
+        <li>
+          <mat-form-field appearance="fill">
+            <mat-label>What's your name?</mat-label>
+            <input matInput [(ngModel)]="name">
+          </mat-form-field>
+        </li>
+        <li>
+          <button mat-raised-button color="primary" (click)="openDialog2()">Open Dialog 2</button>
+        </li>
+        <li *ngIf="animal">
+          You chose: <i>{{animal}}</i>
+        </li>
+      </ul>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Dialog 3 -->
+    <div class="mt20px">
+      <button mat-raised-button color="primary" (click)="openDialog3()">Open Dialog 3</button>
+    </div>
+  </div>
+</div>

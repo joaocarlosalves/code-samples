@@ -1,0 +1,123 @@
+<div class="page-container">
+  <h1>Stepper</h1>
+
+  <div class="page-content">
+    <!-- Stepper 1 -->
+    <div class='mb20px'>
+      <button mat-raised-button color='primary' (click)="isEditable = !isEditable">
+        {{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}
+      </button>
+
+      <mat-stepper linear #stepper>
+        <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Fill out your name</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="firstCtrl" placeholder="Last name, First name" required>
+            </mat-form-field>
+            <div>
+              <button mat-button color='primary' matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Fill out your address</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Address</mat-label>
+              <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                     required>
+            </mat-form-field>
+            <div>
+              <button mat-button color='primary' matStepperPrevious>Back</button>
+              <button mat-button color='primary' matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <p>You are now done.</p>
+          <div>
+            <button mat-button color='primary' matStepperPrevious>Back</button>
+            <button mat-button color='primary' (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+      </mat-stepper>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Stepper 2 -->
+    <div class='mt20px mb20px'>
+      <mat-stepper #stepper>
+        <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Fill out your name</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div>
+              <p>Go to a different step to see the error state</p>
+              <button mat-button color='primary' matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Fill out your address</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Address</mat-label>
+              <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="secondCtrl"
+                     required>
+            </mat-form-field>
+            <div>
+              <p>Go to a different step to see the error state</p>
+              <button mat-button color='primary' matStepperPrevious>Back</button>
+              <button mat-button color='primary' matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <p>You are now done.</p>
+          <div>
+            <button mat-button color='primary' matStepperPrevious>Back</button>
+            <button mat-button color='primary' (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+      </mat-stepper>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Stepper 3 -->
+    <div class='mt20px mb20px'>
+      <mat-stepper orientation="vertical">
+        <mat-step>
+          <ng-template matStepLabel>Step 1</ng-template>
+          <ng-template matStepContent>
+            <p>This content was rendered lazily</p>
+            <button mat-button color='primary' matStepperNext>Next</button>
+          </ng-template>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Step 2</ng-template>
+          <ng-template matStepContent>
+            <p>This content was also rendered lazily</p>
+            <button mat-button color='primary' matStepperPrevious>Back</button>
+            <button mat-button color='primary' matStepperNext>Next</button>
+          </ng-template>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Step 3</ng-template>
+          <p>This content was rendered eagerly</p>
+          <button mat-button color='primary' matStepperPrevious>Back</button>
+        </mat-step>
+      </mat-stepper>
+    </div>
+  </div>
+</div>
+
+

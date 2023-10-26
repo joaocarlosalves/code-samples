@@ -1,0 +1,95 @@
+<div class="page-container">
+  <h1>Tabs</h1>
+
+  <div class="page-content">
+    <!-- Tabs 1 -->
+    <div class='mb20px'>
+      <ng-container *ngIf="(asyncTabs | async) === null">
+        Loading tabs...
+      </ng-container>
+
+      <mat-tab-group>
+        <mat-tab *ngFor="let tab of asyncTabs | async">
+          <ng-template mat-tab-label>{{ tab.label }}</ng-template>
+          <p class='mt20px'>{{ tab.content }}</p>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Tabs 2 -->
+    <div class='mt20px mb20px'>
+      <mat-tab-group>
+        <mat-tab label="First"><p class='mt20px'>Content 1</p></mat-tab>
+        <mat-tab label="Second"><p class='mt20px'>Content 2</p></mat-tab>
+        <mat-tab label="Third"><p class='mt20px'>Content 3</p></mat-tab>
+      </mat-tab-group>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Tabs 3 -->
+    <div class='mt20px mb20px'>
+      <mat-tab-group>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+            First
+          </ng-template>
+          <p class='mt20px'>Content 1</p>
+        </mat-tab>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+            Second
+          </ng-template>
+          <p class='mt20px'>Content 2</p>
+        </mat-tab>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+            Third
+          </ng-template>
+
+          <p class='mt20px'>Content 3</p>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Tabs 4 -->
+    <div class='mt20px mb20px'>
+      <mat-form-field appearance="fill">
+        <mat-label>Selected tab index</mat-label>
+        <input matInput type="number" [formControl]="selected">
+      </mat-form-field>
+
+      <div>
+        <button mat-raised-button color="primary"
+                class="example-add-tab-button"
+                (click)="addTab(selectAfterAdding.checked)">
+          Add new tab
+        </button>
+        <mat-checkbox #selectAfterAdding> Select tab after adding </mat-checkbox>
+      </div>
+
+      <mat-tab-group [selectedIndex]="selected.value"
+                     (selectedIndexChange)="selected.setValue($event)">
+        <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+          Contents for {{tab}} tab
+
+          <button mat-raised-button color="primary"
+                  class="example-delete-tab-button"
+                  [disabled]="tabs.length === 1"
+                  (click)="removeTab(index)">
+            Delete Tab
+          </button>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

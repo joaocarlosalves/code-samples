@@ -1,0 +1,30 @@
+<div class="page-container">
+  <h1>Radio</h1>
+
+  <div class="page-content">
+    <!-- Radio 1 -->
+    <div class='mb20px'>
+      <label id="example-radio-group-label"><b>Pick your favorite season</b></label>
+      <mat-radio-group class="example-radio-group" [(ngModel)]="favoriteSeason">
+
+        <mat-radio-button class="example-radio-button"
+          *ngFor="let season of seasons" [value]="season">
+          {{ season }}
+        </mat-radio-button>
+      </mat-radio-group>
+      <div><b>Your favorite season is:</b> {{ favoriteSeason }}</div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Radio 2 -->
+    <div class='mb20px mt20px'>
+      <mat-radio-group>
+        <mat-radio-button value="1">Option 1</mat-radio-button>
+        <mat-radio-button value="2">Option 2</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+</div>
+
+

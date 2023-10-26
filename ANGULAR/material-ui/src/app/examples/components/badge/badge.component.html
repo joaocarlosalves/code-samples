@@ -1,0 +1,49 @@
+<div class="page-container">
+  <h1>Badge</h1>
+
+  <div class="page-content">
+    <!-- Badge 1 -->
+    <div class="mb20px">
+      <div matBadge="4" matBadgeOverlap="false" class="demo-section">Text with a badge</div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Badge 2 -->
+    <div class="mt20px mb20px">
+      <div matBadge="1" matBadgeSize="large" class="demo-section">Text with large badge</div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Badge 3 -->
+    <div class="mt20px mb20px">
+      Button with a badge on the left
+      <button mat-raised-button color="primary"
+          matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+        Action
+      </button>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Badge 4 -->
+    <div class="mt20px mb20px">
+      Button toggles badge visibility
+      <button mat-raised-button matBadge="7" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()">
+          Hide
+      </button>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Badge 5 -->
+    <div class="mt20px mb20px">
+      Icon with a badge
+      <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+      <span class="cdk-visually-hidden">
+        Example with a home icon with overlaid badge showing the number 15
+      </span>
+    </div>
+  </div>
+</div>

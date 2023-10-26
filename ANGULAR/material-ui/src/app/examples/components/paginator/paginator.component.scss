@@ -1,0 +1,8 @@
+.demo-toggles, .demo-options {
+  display: flex;
+  flex-direction: column;
+}
+.demo-toggles * { margin-bottom: 16px }
+.demo-options { width: 600px }
+.demo-data * { margin: 16px 0 }
+.demo-paginator { width: 600px }

@@ -1,0 +1,149 @@
+<div class="page-container">
+  <h1>Lists</h1>
+
+  <div class="page-content">
+    <!-- Lists 1 -->
+    <div class='mb20px'>
+      <mat-list role="list">
+        <mat-list-item role="listitem">Item 1</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item role="listitem">Item 2</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item role="listitem">Item 3</mat-list-item>
+      </mat-list>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Lists 2 -->
+    <div class='mt20px mb20px'>
+      <mat-list>
+        <div mat-subheader>Folders</div>
+        <mat-list-item *ngFor="let folder of folders">
+          <mat-icon matListItemIcon>folder</mat-icon>
+          <div matListItemTitle>{{folder.name}}</div>
+          <div matListItemLine>{{folder.updated | date}}</div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+        <br>
+
+        <div class='mt20px' mat-subheader>Notes</div>
+        <mat-list-item *ngFor="let note of notes">
+          <mat-icon matListItemIcon>note</mat-icon>
+          <div matListItemTitle>{{note.name}}</div>
+          <div matListItemLine>{{note.updated | date}}</div>
+        </mat-list-item>
+      </mat-list>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Lists 3 -->
+    <div class='mt20px mb20px'>
+      <mat-selection-list #shoes>
+        <mat-list-option *ngFor="let shoe of typesOfShoes">{{shoe}}</mat-list-option>
+      </mat-selection-list>
+
+      <p>Options selected: {{shoes.selectedOptions.selected.length}}</p>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Lists 4 -->
+    <div class='mt20px mb20px'>
+      <mat-selection-list #shoes [multiple]="false">
+        <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">{{shoe}}</mat-list-option>
+      </mat-selection-list>
+
+      <p>Option selected: {{shoes.selectedOptions.hasValue() ? shoes.selectedOptions.selected[0].value : 'None'}}</p>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Lists 5 -->
+    <div class='mt20px mb20px'>
+      <h3>Single line lists</h3>
+      <mat-list>
+        <mat-list-item>
+          <span matListItemTitle>This is the title</span>
+        </mat-list-item>
+        <mat-list-item>Also the title</mat-list-item>
+      </mat-list>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Lists 6 -->
+    <div class='mt20px mb20px'>
+      <h3>Two line lists</h3>
+      <mat-list>
+        <mat-list-item>
+          <span matListItemTitle>Title</span>
+          <span matListItemLine>Second line</span>
+        </mat-list-item>
+
+        <mat-list-item>
+          <span matListItemTitle>Title</span>
+          <span>Second line</span>
+        </mat-list-item>
+
+        <mat-list-item>
+          <span matListItemTitle>Title</span>
+          Second line
+        </mat-list-item>
+      </mat-list>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Lists 7 -->
+    <div class='mt20px mb20px'>
+      <h3>Three line lists</h3>
+      <mat-list>
+        <mat-list-item>
+          <span matListItemTitle>Title</span>
+          <span matListItemLine>Second line</span>
+          <span matListItemLine>Third line</span>
+        </mat-list-item>
+
+        <mat-list-item>
+          <span matListItemTitle>Title</span>
+          <span matListItemLine>Second line. This line will truncate.</span>
+          <span>Third line</span>
+        </mat-list-item>
+
+        <mat-list-item>
+          <span matListItemTitle>Title</span>
+          <span matListItemLine>Second line. This line will truncate.</span>
+          Third line
+        </mat-list-item>
+      </mat-list>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- Lists 8 -->
+    <div class='mt20px'>
+      <h3>Three line list with secondary text wrapping</h3>
+      <mat-list class="example-list-wrapping">
+        <mat-list-item lines="3">
+          <span matListItemTitle>Title</span>
+          <span
+            >Secondary line that will wrap because the list lines is explicitly set to 3 lines. Text
+            inside of a `matListItemTitle` or `matListItemLine` will never wrap.
+          </span>
+        </mat-list-item>
+
+        <mat-list-item lines="3">
+          <span matListItemTitle>Title</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          non proident, sunt in culpa qui officia deserunt mollit anim id est
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>

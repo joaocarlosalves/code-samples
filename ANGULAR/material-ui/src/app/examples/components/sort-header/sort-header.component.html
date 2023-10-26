@@ -1,0 +1,23 @@
+<div class="page-container">
+  <h1>Sort Header</h1>
+
+  <div class="page-content">
+    <table matSort (matSortChange)="sortData($event)">
+      <tr style="font-weight: bold">
+        <th mat-sort-header="name"><b>Dessert (100g)</b></th>
+        <th mat-sort-header="calories"><b>Calories</b></th>
+        <th mat-sort-header="fat"><b>Fat (g)</b></th>
+        <th mat-sort-header="carbs"><b>Carbs (g)</b></th>
+        <th mat-sort-header="protein"><b>Protein (g)</b></th>
+      </tr>
+
+      <tr *ngFor="let dessert of sortedData">
+        <td>{{ dessert.name }}</td>
+        <td>{{ dessert.calories }}</td>
+        <td>{{ dessert.fat }}</td>
+        <td>{{ dessert.carbs }}</td>
+        <td>{{ dessert.protein }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
