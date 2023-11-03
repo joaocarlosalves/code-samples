@@ -1,0 +1,54 @@
+<div column gap-30>
+  <div class="card">
+    <label class="flex">Date / Time Picker / Calendar</label>
+    <p-calendar
+      [(ngModel)]="date"
+      [showIcon]="true"
+      [showTime]="true"
+      [showSeconds]="true"
+    ></p-calendar>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label class="flex">Month Picker</label>
+    <p-calendar
+      [(ngModel)]="date"
+      view="month"
+      dateFormat="mm/yy"
+      [readonlyInput]="true"
+    ></p-calendar>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label class="flex">Year Picker</label>
+    <p-calendar
+      [(ngModel)]="date"
+      view="year"
+      dateFormat="yy"
+      inputId="yearpicker"
+    ></p-calendar>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label class="flex">With Button Bar</label>
+    <p-calendar [(ngModel)]="date" [showButtonBar]="true"></p-calendar>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label class="flex">Inline</label>
+    <p-calendar
+      class="max-w-full"
+      [(ngModel)]="date"
+      [inline]="true"
+      [showWeek]="true"
+    ></p-calendar>
+  </div>
+</div>

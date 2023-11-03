@@ -1,0 +1,88 @@
+<div column gap-20>
+  <div flex gap-20>
+    <div column gap-20>
+      <div class="card">
+        <label flex>Basic Text Input</label>
+
+        <input type="text" pInputText [(ngModel)]="value" />
+      </div>
+
+      <div class="card">
+        <label flex>Icon Text Input</label>
+
+        <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input type="text" pInputText [(ngModel)]="value" />
+        </span>
+      </div>
+
+      <div class="card">
+        <span class="p-input-icon-right">
+          <i class="pi pi-spin pi-spinner"></i>
+          <input type="text" pInputText [(ngModel)]="value2" />
+        </span>
+      </div>
+
+      <div class="card">
+        <label flex>Key Filter</label>
+        <input
+          pInputText
+          pKeyFilter="int"
+          placeholder="Integers"
+          [(ngModel)]="value"
+        />
+      </div>
+    </div>
+
+    <div column gap-20>
+      <div class="card">
+        <label flex htmlFor="username">Username</label>
+        <input
+          pInputText
+          id="username"
+          aria-describedby="username-help"
+          [(ngModel)]="value"
+        />
+        <small flex id="username-help" style="font-size: 12px"
+          >Enter your username to reset your password.</small
+        >
+      </div>
+
+      <div class="card">
+        <label flex>Invalid</label>
+        <input pInputText class="ng-invalid ng-dirty" [(ngModel)]="value" />
+      </div>
+
+      <div class="card" style="margin-top: 10px;">
+        <span class="p-float-label">
+          <input pInputText id="username" [(ngModel)]="value" />
+          <label htmlFor="username">Username (Float Label)</label>
+        </span>
+      </div>
+    </div>
+
+    <div column>
+      <label flex>Sizes</label>
+
+      <div column gap-20>
+        <input
+          pInputText
+          type="text"
+          class="p-inputtext-sm"
+          placeholder="Small"
+          [(ngModel)]="value"
+        />
+
+        <input pInputText type="text" placeholder="Normal" [(ngModel)]="value2" />
+
+        <input
+          pInputText
+          type="text"
+          class="p-inputtext-lg"
+          placeholder="Large"
+          [(ngModel)]="value3"
+        />
+      </div>
+    </div>
+  </div>
+</div>

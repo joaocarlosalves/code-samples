@@ -1,0 +1,86 @@
+<div column gap-20>
+  <div flex gap-20>
+    <div column gap-20>
+      <div class="card">
+        <label flex>Basic</label>
+
+        <p-treeSelect
+          class="md:w-20rem w-full"
+          containerStyleClass="w-full"
+          [(ngModel)]="selectedNodes"
+          [options]="nodes"
+          placeholder="Select Item"
+        ></p-treeSelect>
+      </div>
+
+      <div class="card">
+        <label flex>Checkbox</label>
+
+        <p-treeSelect
+          class="w-full md:w-20rem"
+          containerStyleClass="w-full"
+          [(ngModel)]="selectedNodes"
+          [options]="nodes"
+          [metaKeySelection]="false"
+          selectionMode="multiple"
+          placeholder="Select Item"
+        ></p-treeSelect>
+      </div>
+
+      <div class="card">
+        <label flex>Filter</label>
+
+        <p-treeSelect
+          class="w-full md:w-20rem"
+          containerStyleClass="w-full"
+          [(ngModel)]="selectedNodes"
+          [options]="nodes"
+          display="chip"
+          [metaKeySelection]="false"
+          selectionMode="checkbox"
+          placeholder="Select Item"
+        ></p-treeSelect>
+      </div>
+    </div>
+
+    <div column gap-20>
+      <div class="card">
+        <label flex>Invalid</label>
+
+        <p-treeSelect
+          class="md:w-20rem w-full ng-invalid ng-dirty"
+          containerStyleClass="w-full"
+          [(ngModel)]="selectedNodes"
+          [options]="nodes"
+          placeholder="Select Item"
+        ></p-treeSelect>
+      </div>
+
+      <div class="card">
+        <label flex>Disabled</label>
+
+        <p-treeSelect
+          class="md:w-20rem w-full"
+          containerStyleClass="w-full"
+          [(ngModel)]="selectedNodes"
+          [options]="nodes"
+          [disabled]="true"
+          placeholder="Select Item"
+        ></p-treeSelect>
+      </div>
+
+      <div class="card" style="margin-top: 23px">
+        <span class="p-float-label md:w-20rem w-full">
+          <p-treeSelect
+            containerStyleClass="w-full"
+            [(ngModel)]="selectedNodes"
+            [options]="nodes"
+            placeholder="Select Item"
+          ></p-treeSelect>
+
+          <label for="treeselect">Float Label</label>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

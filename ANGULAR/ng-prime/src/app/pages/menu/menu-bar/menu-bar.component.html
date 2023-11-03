@@ -1,0 +1,26 @@
+<div column gap-30>
+  <div class="card">
+    <label flex>Basic</label>
+
+    <p-menubar [model]="items[0]"></p-menubar>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label flex>Template</label>
+
+    <p-menubar [model]="items[1]">
+      <ng-template pTemplate="start">
+        <img
+          src="https://primefaces.org/cdn/primeng/images/primeng.svg"
+          height="40"
+          class="mr-2"
+        />
+      </ng-template>
+      <ng-template pTemplate="end">
+        <input type="text" pInputText placeholder="Search" class="w-full" />
+      </ng-template>
+    </p-menubar>
+  </div>
+</div>

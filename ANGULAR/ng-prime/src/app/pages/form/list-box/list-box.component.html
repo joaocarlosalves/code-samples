@@ -1,0 +1,89 @@
+<div flex gap-20>
+  <div column gap-20>
+    <div class="card">
+      <label class='flex'>Basic</label>
+
+      <p-listbox
+        [options]="cities"
+        [(ngModel)]="selectedCity"
+        optionLabel="name"
+        [style]="{ width: '15rem' }"
+      ></p-listbox>
+    </div>
+
+    <div class="card">
+      <label class='flex'>Multiple</label>
+
+      <p-listbox
+        [options]="cities"
+        [(ngModel)]="selectedCities"
+        optionLabel="name"
+        [style]="{ width: '15rem' }"
+        [multiple]="true"
+        [metaKeySelection]="false"
+      ></p-listbox>
+    </div>
+  </div>
+
+  <div column gap-20>
+    <div class="card">
+      <label class='flex'>Template</label>
+
+      <p-listbox
+        [options]="countries"
+        [(ngModel)]="selectedCountry"
+        optionLabel="name"
+        [listStyle]="{ 'max-height': '250px' }"
+        [style]="{ width: '15rem' }"
+      >
+        <ng-template let-country pTemplate="item">
+          <div class="flex align-items-center gap-2" gap-10>
+            <img
+              src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png"
+              [class]="'flag flag-' + country.code.toLowerCase()"
+              style="width: 18px"
+            />
+            <div>{{ country.name }}</div>
+          </div>
+        </ng-template>
+      </p-listbox>
+    </div>
+
+    <div class="card">
+      <label class='flex'>Group</label>
+
+      <p-listbox
+        [options]="groupedCities"
+        [group]="true"
+        [(ngModel)]="selectedCountry"
+        [listStyle]="{ 'max-height': '250px' }"
+        [style]="{ width: '15rem' }"
+      >
+        <ng-template let-group pTemplate="group">
+          <div class="flex align-items-center" gap-10>
+            <img
+              src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png"
+              [class]="'mr-2 flag flag-' + group.value"
+              style="width: 20px"
+            />
+            <span>{{ group.label }}</span>
+          </div>
+        </ng-template>
+      </p-listbox>
+    </div>
+  </div>
+
+  <div column gap-20>
+    <div class="card">
+      <label class='flex'>Filter</label>
+
+      <p-listbox
+        [options]="cities"
+        [(ngModel)]="selectedCity"
+        optionLabel="name"
+        [filter]="true"
+        [style]="{ width: '15rem' }"
+      ></p-listbox>
+    </div>
+  </div>
+</div>

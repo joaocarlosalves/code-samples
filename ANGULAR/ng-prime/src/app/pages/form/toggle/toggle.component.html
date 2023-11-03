@@ -1,0 +1,26 @@
+<div column gap-20>
+  <div class="card">
+    <label flex>Basic</label>
+
+    <p-toggleButton
+      [(ngModel)]="checked"
+      onLabel="Yes"
+      offLabel="No"
+    ></p-toggleButton>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <label flex>Customized</label>
+
+    <p-toggleButton
+      [(ngModel)]="checked"
+      [onLabel]="'I confirm'"
+      offLabel="I reject"
+      [onIcon]="'pi pi-check'"
+      offIcon="pi pi-times"
+      [style]="{ width: '10em' }"
+    ></p-toggleButton>
+  </div>
+</div>

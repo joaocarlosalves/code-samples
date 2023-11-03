@@ -1,0 +1,45 @@
+<div class="card p-fluid">
+  <label class="flex">Basic Color Picker</label>
+  <p-colorPicker [(ngModel)]="color"></p-colorPicker>
+</div>
+
+<br />
+
+<hr>
+
+<br />
+
+<div class="card p-fluid">
+  <label class="flex">Inline Color Picker</label>
+  <p-colorPicker [(ngModel)]="color" [inline]="true"></p-colorPicker>
+</div>
+
+<br />
+
+<hr>
+
+<br />
+
+<div class="card p-fluid">
+  <label class="flex">Formats Color Picker</label>
+</div>
+
+<div class="card flex flex-wrap gap-3" style="gap: 30px">
+  <div class="flex-1 flex flex-column align-items-center gap-3"  style="gap: 5px">
+      <label htmlFor="cp-hex" class="font-bold block mb-2"> HEX </label>
+      <p-colorPicker [(ngModel)]="color"></p-colorPicker>
+      <span>{{ color }}</span>
+  </div>
+
+  <div class="flex-1 flex flex-column align-items-center gap-3"  style="gap: 5px">
+      <label htmlFor="cp-rgb" class="font-bold block mb-2"> RGB </label>
+      <p-colorPicker [(ngModel)]="colorRGB" format="rgb"></p-colorPicker>
+      <span>{{ 'r:' + colorRGB.r + ' g:' + colorRGB.g + ' b:' + colorRGB.b }}</span>
+  </div>
+
+  <div class="flex-1 flex flex-column align-items-center gap-3"  style="gap: 5px">
+      <label htmlFor="cp-hsb" class="font-bold block mb-2"> HSB </label>
+      <p-colorPicker [(ngModel)]="colorHSB" format="hsb"></p-colorPicker>
+      <span>{{ 'h:' + colorHSB.h + ' s:' + colorHSB.s + ' b:' + colorHSB.b }}</span>
+  </div>
+</div>

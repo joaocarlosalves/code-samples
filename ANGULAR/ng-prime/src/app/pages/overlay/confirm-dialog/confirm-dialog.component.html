@@ -1,0 +1,131 @@
+<div column gap-20>
+  <div column gap-30>
+    <div class="card">
+      <label flex>Basic</label>
+
+      <p-toast></p-toast>
+      <p-confirmDialog [style]="{ width: '50vw' }"></p-confirmDialog>
+
+      <div flex gap-10>
+        <p-button
+        (click)="confirm1()"
+        icon="pi pi-check"
+        label="Confirm"
+      ></p-button>
+      <p-button
+        (click)="confirm2()"
+        icon="pi pi-times"
+        label="Delete"
+        class="p-button-danger"
+      ></p-button>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <label flex>Basic</label>
+      <p-toast></p-toast>
+      <p-confirmDialog
+        [style]="{ width: '50vw' }"
+        key="positionDialog"
+        [position]="position"
+        rejectButtonStyleClass="p-button-outlined"
+      ></p-confirmDialog>
+      <div column gap-10>
+        <div flex gap-10>
+          <p-button
+            (click)="confirmPosition('left')"
+            icon="pi pi-arrow-right"
+            label="Left"
+            styleClass="p-button-help"
+          ></p-button>
+          <p-button
+            (click)="confirmPosition('right')"
+            icon="pi pi-arrow-left"
+            label="Right"
+            styleClass="p-button-help"
+          ></p-button>
+          <p-button
+            (click)="confirmPosition('top-left')"
+            icon="pi pi-arrow-down"
+            label="TopLeft"
+            styleClass="p-button-warning"
+          ></p-button>
+          <p-button
+            (click)="confirmPosition('top')"
+            icon="pi pi-arrow-down"
+            label="Top"
+            styleClass="p-button-warning"
+          ></p-button>
+          <p-button
+            (click)="confirmPosition('top-right')"
+            icon="pi pi-arrow-down"
+            label="TopRight"
+            styleClass="p-button-warning"
+          ></p-button>
+        </div>
+        <div flex gap-10>
+          <p-button
+            (click)="confirmPosition('bottom-left')"
+            icon="pi pi-arrow-up"
+            label="BottomLeft"
+            styleClass="p-button-success"
+          ></p-button>
+          <p-button
+            (click)="confirmPosition('bottom')"
+            icon="pi pi-arrow-up"
+            label="Bottom"
+            styleClass="p-button-success"
+          ></p-button>
+          <p-button
+            (click)="confirmPosition('bottom-right')"
+            icon="pi pi-arrow-up"
+            label="BottomRight"
+            styleClass="p-button-success"
+          ></p-button>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <label flex>Template</label>
+
+      <p-toast></p-toast>
+      <p-confirmDialog #cd [style]="{ width: '50vw' }">
+        <ng-template pTemplate="header">
+          <h3>Header Content</h3>
+        </ng-template>
+        <ng-template pTemplate="icon">
+          <i class="pi pi-user"></i>
+        </ng-template>
+        <ng-template pTemplate="message">
+          <p>Message Template</p>
+        </ng-template>
+        <ng-template pTemplate="footer">
+          <button
+            type="button"
+            pButton
+            icon="pi pi-times"
+            label="No"
+            (click)="cd.reject()"
+          ></button>
+          <button
+            type="button"
+            pButton
+            icon="pi pi-check"
+            label="Yes"
+            (click)="cd.accept()"
+          ></button>
+        </ng-template>
+      </p-confirmDialog>
+      <p-button
+        (click)="confirm1()"
+        icon="pi pi-check"
+        label="Confirm"
+      ></p-button>
+    </div>
+  </div>
+</div>

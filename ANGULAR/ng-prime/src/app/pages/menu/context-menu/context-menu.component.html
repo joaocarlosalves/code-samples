@@ -1,0 +1,35 @@
+<div column gap-30>
+  <div class="card">
+    <label flex>Basic</label>
+
+    <img
+      #img
+      src="https://primefaces.org/cdn/primeng/images/demo/nature/nature3.jpg"
+      alt="Logo"
+      aria-haspopup="true"
+      class="max-w-full"
+    />
+
+    <p-contextMenu [target]="img" [model]="items[0]"></p-contextMenu>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label flex>Document</label>
+
+    <p class="mb-0">Right-Click anywhere on this image to view the ContextMenu.</p>
+
+    <img
+      #img2
+      src="https://primefaces.org/cdn/primeng/images/demo/nature/nature3.jpg"
+      alt="Logo"
+      aria-haspopup="true"
+      class="max-w-full"
+    />
+
+    <p-contextMenu [model]="items[1]" [target]="img2"></p-contextMenu>
+  </div>
+
+  <br />
+</div>

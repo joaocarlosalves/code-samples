@@ -1,0 +1,61 @@
+<div column gap-30>
+  <div flex gap-30>
+    <div column gap-20>
+      <div column gap-10>
+        <label class='flex'>Basic</label>
+
+        <p-knob [(ngModel)]="value"></p-knob>
+      </div>
+
+      <div column gap-10>
+        <label class='flex'>Min/Max</label>
+
+        <p-knob [(ngModel)]="value" [min]="-50" [max]="50"></p-knob>
+      </div>
+    </div>
+
+    <div column gap-20>
+      <div column gap-10>
+        <label class='flex'>Step</label>
+
+        <p-knob [(ngModel)]="value" [step]="10"></p-knob>
+      </div>
+
+      <div column gap-10>
+        <label class='flex'>Template</label>
+
+        <p-knob [(ngModel)]="value" valueTemplate="{value}%"></p-knob>
+      </div>
+    </div>
+
+    <div column gap-20>
+      <div column gap-10>
+        <label class='flex'>Stroke</label>
+
+        <p-knob [(ngModel)]="value" [strokeWidth]="5"></p-knob>
+      </div>
+
+      <div column gap-20>
+        <label class='flex'>Disabled</label>
+
+        <p-knob [(ngModel)]="value" [disabled]="true"></p-knob>
+      </div>
+    </div>
+  </div>
+
+  <div flex gap-20>
+    <div column>
+      <label class='flex'>Size</label>
+
+      <p-knob [(ngModel)]="value" [size]="200"></p-knob>
+    </div>
+
+    <div column gap-20>
+      <label class='flex'>Color</label>
+
+      <p-knob [(ngModel)]="value" valueColor="SlateGray" rangeColor="MediumTurquoise"></p-knob>
+    </div>
+
+
+  </div>
+</div>

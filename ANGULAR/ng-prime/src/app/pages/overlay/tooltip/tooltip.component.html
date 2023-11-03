@@ -1,0 +1,75 @@
+<div column gap-30>
+  <div class="card">
+    <label flex>Basic</label>
+    <input
+      type="text"
+      pInputText
+      pTooltip="Enter your username"
+      placeholder="hover to display tooltip"
+    />
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label flex>Position</label>
+    <div flex gap-10>
+      <input
+        type="text"
+        pInputText
+        pTooltip="Enter your username"
+        tooltipPosition="right"
+        placeholder="Right"
+      />
+      <input
+        type="text"
+        pInputText
+        pTooltip="Enter your username"
+        tooltipPosition="left"
+        placeholder="Left"
+      />
+      <input
+        type="text"
+        pInputText
+        pTooltip="Enter your username"
+        tooltipPosition="top"
+        placeholder="Top"
+      />
+      <input
+        type="text"
+        pInputText
+        pTooltip="Enter your username"
+        tooltipPosition="bottom"
+        placeholder="Bottom"
+      />
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label flex>Events</label>
+
+    <input
+      type="text"
+      pInputText
+      pTooltip="Enter your username"
+      tooltipEvent="focus"
+      placeholder="focus to display tooltip"
+    />
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label flex>Delay</label>
+    <input
+      type="text"
+      pInputText
+      pTooltip="Enter your username"
+      [showDelay]="1000"
+      [hideDelay]="1000"
+      placeholder="hover to display tooltip"
+    />
+  </div>
+</div>

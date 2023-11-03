@@ -1,0 +1,54 @@
+<div column gap-20>
+  <div column gap-20>
+    <div class="card">
+      <label flex>Basic</label>
+      <p-image
+        src="https://primefaces.org/cdn/primeng/images/galleria/galleria1.jpg"
+        alt="Image"
+        width="250"
+      ></p-image>
+    </div>
+
+    <hr />
+
+    <div class="card">
+      <label flex>Preview</label>
+      <p-image
+        src="https://primefaces.org/cdn/primeng/images/galleria/galleria1.jpg"
+        alt="Image"
+        width="250"
+        [preview]="true"
+      ></p-image>
+    </div>
+
+    <hr />
+
+    <div class="card">
+      <label flex>Indicator</label>
+
+      <p-image
+        src="https://primefaces.org/cdn/primeng/images/galleria/galleria1.jpg"
+        [preview]="true"
+        alt="Image"
+        width="250"
+      >
+        <ng-template pTemplate="indicator">
+          <i class="pi pi-check"></i>
+        </ng-template>
+      </p-image>
+    </div>
+
+    <hr />
+
+    <div class="card">
+      <label flex>Image Source</label>
+      <p-image
+        src="https://primefaces.org/cdn/primeng/images/galleria/galleria1.jpg"
+        previewImageSrc="https://primefaces.org/cdn/primeng/images/galleria/galleria2.jpg"
+        alt="Image"
+        width="250"
+        [preview]="true"
+      ></p-image>
+    </div>
+  </div>
+</div>

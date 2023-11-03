@@ -1,0 +1,21 @@
+<div column gap-20>
+  <div column gap-20>
+    <div class="card">
+      <label flex>Basic</label>
+
+      <p-panelMenu [model]="items" [style]="{ width: '300px' }"></p-panelMenu>
+    </div>
+
+    <hr />
+
+    <div class="card">
+      <label flex>Multiple</label>
+
+      <p-panelMenu
+        [model]="items"
+        [style]="{ width: '300px' }"
+        [multiple]="true"
+      ></p-panelMenu>
+    </div>
+  </div>
+</div>

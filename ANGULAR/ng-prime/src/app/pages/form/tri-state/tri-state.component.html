@@ -1,0 +1,21 @@
+<div column gap-20>
+  <div class="card">
+    <label flex>Basic {{ value === null ? "null" : value }}</label>
+
+    <p-triStateCheckbox
+      [(ngModel)]="value"
+      inputId="tricheckbox"
+    ></p-triStateCheckbox>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <label flex>Disabled {{ value === null ? "null" : value }}</label>
+
+    <p-triStateCheckbox
+      [(ngModel)]="value"
+      [disabled]="true"
+    ></p-triStateCheckbox>
+  </div>
+</div>

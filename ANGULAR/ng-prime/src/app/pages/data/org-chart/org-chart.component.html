@@ -1,0 +1,64 @@
+<div column gap-30>
+  <div class="card">
+    <label flex>Basic</label>
+
+    <p-organizationChart [value]="data"></p-organizationChart>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label flex>Template</label>
+
+    <p-organizationChart [value]="data1">
+      <ng-template let-node pTemplate="default">
+        <div class="p-2 text-center">
+          <img
+            src="https://primefaces.org/cdn/primeng/images/flag/flag_placeholder.png"
+            [alt]="node.label"
+            [class]="'flag' + ' flag-' + node.data"
+            width="32"
+          />
+          <div>{{ node.data.name }}</div>
+          <div class="p-2">{{ node.label }}</div>
+        </div>
+      </ng-template>
+    </p-organizationChart>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label flex>Selection</label>
+
+    <p-organizationChart
+      [value]="data2"
+      selectionMode="multiple"
+      [(selection)]="selectedNodes"
+    >
+      <ng-template let-node pTemplate="person">
+        <div class="p-2 text-center">
+          <img [src]="node.data.image" class="mb-3 w-3rem h-3rem" />
+          <div class="font-bold">{{ node.data.name }}</div>
+          <div>{{ node.data.title }}</div>
+        </div>
+      </ng-template>
+    </p-organizationChart>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label flex>Colored</label>
+
+    <p-organizationChart [value]="data3">
+      <ng-template let-node pTemplate="person">
+        <div class="p-2 text-center">
+          <img [src]="node.data.image" class="mb-3 w-3rem h-3rem" />
+          <div class="font-bold">{{ node.data.name }}</div>
+          <div>{{ node.data.title }}</div>
+        </div>
+      </ng-template>
+    </p-organizationChart>
+  </div>
+</div>

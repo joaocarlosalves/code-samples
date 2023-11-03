@@ -1,0 +1,30 @@
+<div column gap-20>
+  <div class="card">
+    <label flex>Linear</label>
+
+    <div flex class="speeddial-linear-demo">
+      <p-toast></p-toast>
+      <p-speedDial [model]="items" direction="right"></p-speedDial>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top: 100px">
+    <label flex>Semi Circle</label>
+
+    <div class="card">
+      <div
+        style="height: 300px; position: relative"
+        class="speeddial-circle-demo"
+      >
+        <p-toast></p-toast>
+        <p-speedDial
+          [model]="items"
+          [radius]="120"
+          direction="down-right"
+          type="quarter-circle"
+          buttonClassName="p-button-success"
+        ></p-speedDial>
+      </div>
+    </div>
+  </div>
+</div>

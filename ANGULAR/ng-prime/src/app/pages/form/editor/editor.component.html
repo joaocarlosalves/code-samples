@@ -1,0 +1,15 @@
+<div column gap-30>
+  <div class="card p-fluid" *ngIf="text != ''">
+    <label class="flex">Preview Area</label>
+    <div style="height: 280px; width: 100%"  class='preview' #prev></div>
+  </div>
+
+  <hr>
+
+  <div class="card p-fluid">
+    <label class="flex">Quill Editor</label>
+    <p-editor [(ngModel)]="text" [style]="{ height: '280px' }"></p-editor>
+  </div>
+
+  <p-button (click)="setPreview()">Preview</p-button>
+</div>

@@ -1,0 +1,38 @@
+<div class='flex'gap-20>
+  <div>
+    <div class="card">
+      <label class='flex'>Basic Textarea</label>
+      <textarea rows="5" cols="30" pInputTextarea [(ngModel)]="value"></textarea>
+    </div>
+
+    <br>
+
+    <div class="card">
+      <label class='flex'>Auto Resize Textarea</label>
+      <textarea rows="5" cols="30" pInputTextarea [autoResize]="true"></textarea>
+    </div>
+
+    <br>
+
+    <div class="card">
+      <label class='flex'>Key Filter</label>
+      <textarea pKeyFilter="int" rows="5" cols="30" pInputTextarea></textarea>
+    </div>
+  </div>
+
+  <div>
+    <div class="card">
+      <label class='flex'>Disabled</label>
+      <textarea rows="5" cols="30" pInputTextarea [disabled]="true"></textarea>
+    </div>
+
+    <br><br>
+
+    <div class="card">
+      <span class="p-float-label">
+          <textarea id="float-input" rows="5" cols="30" pInputTextarea></textarea>
+          <label for="float-input">Float Label</label>
+      </span>
+    </div>
+  </div>
+</div>

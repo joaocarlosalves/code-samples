@@ -1,0 +1,241 @@
+<div column gap-20>
+  <div class="flex" gap-20>
+    <div class="column" gap-20>
+      <div class="card">
+        <label class="flex" for="integeronly">Integer Only</label>
+
+        <p-inputNumber inputId="integeronly" [(ngModel)]="value1"></p-inputNumber>
+      </div>
+
+      <div class="card">
+        <label class="flex" for="withoutgrouping">Without Grouping</label>
+
+        <p-inputNumber
+          [(ngModel)]="value2"
+          mode="decimal"
+          inputId="withoutgrouping"
+          [useGrouping]="false"
+        ></p-inputNumber>
+      </div>
+
+      <div class="card">
+        <label class="flex" for="minmaxfraction">Min-Max Fraction Digits</label>
+
+        <p-inputNumber
+          [(ngModel)]="value3"
+          inputId="minmaxfraction"
+          mode="decimal"
+          [minFractionDigits]="2"
+          [maxFractionDigits]="5"
+        ></p-inputNumber>
+      </div>
+
+      <div class="card">
+        <label class="flex" for="minmax">Min-Max Boundaries</label>
+
+        <p-inputNumber
+          [(ngModel)]="value4"
+          inputId="minmax"
+          mode="decimal"
+          [min]="0"
+          [max]="100"
+        ></p-inputNumber>
+      </div>
+    </div>
+
+    <div class="column" gap-20>
+      <div class="card">
+        <label class="flex">User Locale</label>
+
+        <p-inputNumber
+          [(ngModel)]="value5"
+          inputId="locale-user"
+          [minFractionDigits]="2"
+        ></p-inputNumber>
+      </div>
+
+      <div class="card">
+        <label class="flex">United States Locale</label>
+
+        <p-inputNumber
+          [(ngModel)]="value6"
+          inputId="locale-us"
+          mode="decimal"
+          locale="en-US"
+          [minFractionDigits]="2"
+        ></p-inputNumber>
+      </div>
+
+      <div class="card">
+        <label class="flex">German Locale</label>
+
+        <p-inputNumber
+          [(ngModel)]="value7"
+          inputId="locale-german"
+          mode="decimal"
+          locale="de-DE"
+          [minFractionDigits]="2"
+        ></p-inputNumber>
+      </div>
+
+      <div class="card">
+        <label class="flex">Indian Locale</label>
+        <p-inputNumber
+          [(ngModel)]="value8"
+          inputId="locale-indian"
+          mode="decimal"
+          locale="en-IN"
+          [minFractionDigits]="2"
+        ></p-inputNumber>
+      </div>
+    </div>
+
+    <div class="column" gap-20>
+      <div class="card">
+        <label class="flex" for="currency-us">United States</label>
+
+        <p-inputNumber
+          [(ngModel)]="value1"
+          inputId="currency-us"
+          mode="currency"
+          currency="USD"
+          locale="en-US"
+        >
+        </p-inputNumber>
+      </div>
+
+      <div class="card">
+        <label class="flex" for="currency-germany">Germany</label>
+
+        <p-inputNumber
+          [(ngModel)]="value2"
+          mode="currency"
+          inputId="currency-germany"
+          currency="EUR"
+          locale="de-DE"
+        >
+        </p-inputNumber>
+      </div>
+
+      <div class="card">
+        <label class="flex" for="currency-india">India</label>
+
+        <p-inputNumber
+          [(ngModel)]="value3"
+          mode="currency"
+          inputId="currency-india"
+          currency="INR"
+          currencyDisplay="code"
+          locale="en-IN"
+        >
+        </p-inputNumber>
+      </div>
+
+      <div class="card">
+        <label class="flex" for="currency-japan">Japan</label>
+
+        <p-inputNumber
+          [(ngModel)]="value4"
+          mode="currency"
+          inputId="currency-japan"
+          currency="JPY"
+          locale="jp-JP"
+        >
+        </p-inputNumber>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex" gap-20>
+    <div class="column" gap-20>
+      <div class="card">
+        <label class="flex" for="mile">Mile</label>
+
+        <p-inputNumber [(ngModel)]="value9" inputId="mile" suffix=" mi"></p-inputNumber>
+      </div>
+
+      <div class="card">
+        <label class="flex" for="percent">Percent</label>
+
+        <p-inputNumber [(ngModel)]="value10" inputId="percent" prefix="%"></p-inputNumber>
+      </div>
+
+      <div class="card">
+        <label class="flex" for="expiry">Expiry</label>
+        <p-inputNumber
+          [(ngModel)]="value11"
+          inputId="expiry"
+          prefix="Expires in "
+          suffix=" days">
+        </p-inputNumber>
+      </div>
+
+      <div class="card">
+        <label class="flex" for="temperature">Temperature</label>
+
+        <p-inputNumber
+          [(ngModel)]="value12"
+          prefix="↑ "
+          inputId="temperature"
+          suffix="℃"
+          [min]="0"
+          [max]="40">
+        </p-inputNumber>
+      </div>
+    </div>
+
+    <div class="column" gap-20>
+      <div class="card">
+        <label class="flex" for="stacked">Stacked</label>
+
+        <p-inputNumber [(ngModel)]="value9" [showButtons]="true" inputId="stacked" mode="currency" currency="USD"> </p-inputNumber>
+      </div>
+
+      <div class="card">
+        <label class="flex" for="minmax-buttons">Min-Max Boundaries</label>
+
+        <p-inputNumber [(ngModel)]="value9" mode="decimal" [showButtons]="true" inputId="minmax-buttons" [min]="0" [max]="100"> </p-inputNumber>
+      </div>
+
+      <div class="card">
+        <label class="flex" for="horizontal">Horizontal with Step</label>
+
+        <p-inputNumber
+            [(ngModel)]="value9"
+            [showButtons]="true"
+            buttonLayout="horizontal"
+            inputId="horizontal"
+            spinnerMode="horizontal"
+            [step]="0.25"
+            decrementButtonClass="p-button-danger"
+            incrementButtonClass="p-button-success"
+            incrementButtonIcon="pi pi-plus"
+            decrementButtonIcon="pi pi-minus"
+            mode="currency"
+            currency="EUR"
+        ></p-inputNumber>
+      </div>
+    </div>
+
+    <div class="column" gap-20>
+      <div class="card">
+        <label class="flex" for="horizontal">Vertical</label>
+
+        <p-inputNumber
+          [(ngModel)]="value1"
+          [style]="{'width': '4rem'}"
+          [showButtons]="true"
+          buttonLayout="vertical"
+          spinnerMode="vertical"
+          inputId="vertical"
+          decrementButtonClass="p-button-secondary"
+          incrementButtonClass="p-button-secondary"
+          incrementButtonIcon="pi pi-plus"
+          decrementButtonIcon="pi pi-minus">
+        </p-inputNumber>
+      </div>
+    </div>
+  </div>
+</div>
+
+

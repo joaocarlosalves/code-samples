@@ -1,0 +1,27 @@
+<div column gap-20>
+  <div class="card">
+    <label flex>Basic</label>
+
+    <p-messages
+      [(value)]="messages"
+      [enableService]="false"
+      [closable]="false"
+    ></p-messages>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <label flex>Closable</label>
+
+    <p-messages
+      [(value)]="messages1"
+      [enableService]="false"
+      [closable]="false"
+    ></p-messages>
+
+    <p-messages [(value)]="messages2" [enableService]="false"></p-messages>
+  </div>
+
+  <br>
+</div>

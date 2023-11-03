@@ -1,0 +1,108 @@
+<div column gap-30>
+  <div class="card" gap-10>
+    <label flex>Group Radio Button</label>
+
+    <div class="flex flex-wrap gap-3" gap-20>
+      <div class="flex align-items-center" gap-10>
+        <p-radioButton
+          name="pizza"
+          value="Cheese"
+          [(ngModel)]="ingredient"
+          inputId="ingredient1"
+        ></p-radioButton>
+        <label for="ingredient1" class="ml-2">Cheese</label>
+      </div>
+
+      <div class="flex align-items-center" gap-10>
+        <p-radioButton
+          name="pizza"
+          value="Mushroom"
+          [(ngModel)]="ingredient"
+          inputId="ingredient2"
+        ></p-radioButton>
+        <label for="ingredient2" class="ml-2">Mushroom</label>
+      </div>
+
+      <div class="flex align-items-center" gap-10>
+        <p-radioButton
+          name="pizza"
+          value="Pepper"
+          [(ngModel)]="ingredient"
+          inputId="ingredient3"
+        ></p-radioButton>
+        <label for="ingredient3" class="ml-2">Pepper</label>
+      </div>
+
+      <div class="flex align-items-center" gap-10>
+        <p-radioButton
+          name="pizza"
+          value="Onion"
+          [(ngModel)]="ingredient"
+          inputId="ingredient4"
+        ></p-radioButton>
+        <label for="ingredient4" class="ml-2">Onion</label>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <label flex>Dynamic</label>
+
+    <div class="flex flex-column gap-3" gap-20>
+      <div
+        *ngFor="let category of categories"
+        class="field-checkbox flex"
+        gap-10
+      >
+        <p-radioButton
+          [inputId]="category.key"
+          name="category"
+          [value]="category"
+          [(ngModel)]="selectedCategory"
+        ></p-radioButton>
+        <label [for]="category.key" class="ml-2">{{ category.name }}</label>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <label flex>Reactive Form</label>
+
+    <form class="flex flex-column gap-3" [formGroup]="formGroup" gap-20>
+      <div
+        *ngFor="let category of categories"
+        class="field-checkbox flex"
+        gap-10
+      >
+        <p-radioButton
+          [inputId]="category.key"
+          [value]="category"
+          formControlName="selectedCategory"
+        ></p-radioButton>
+        <label [for]="category.key" class="ml-2">{{ category.name }}</label>
+      </div>
+    </form>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <label flex>Invalid Radio Button</label>
+
+    <p-radioButton class="ng-invalid ng-dirty"></p-radioButton>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <label flex>Disabled Radio Button</label>
+
+    <p-radioButton [disabled]="true"></p-radioButton>
+  </div>
+
+  <br>
+</div>

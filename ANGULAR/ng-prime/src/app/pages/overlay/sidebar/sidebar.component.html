@@ -1,0 +1,114 @@
+<div column gap-20>
+  <div column gap-20>
+    <div class="card">
+      <label flex>Basic</label>
+      <p-sidebar [(visible)]="sidebarVisible">
+        <h3>Sidebar</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </p-sidebar>
+      <p-button
+        (click)="sidebarVisible = true"
+        icon="pi pi-arrow-right"
+      ></p-button>
+    </div>
+
+    <hr />
+
+    <div class="card">
+      <label flex>Sides</label>
+
+      <p-sidebar [(visible)]="sidebarVisible1" position="left">
+        <h3>Left Sidebar</h3>
+      </p-sidebar>
+
+      <p-sidebar [(visible)]="sidebarVisible2" position="right">
+        <h3>Right Sidebar</h3>
+      </p-sidebar>
+
+      <p-sidebar [(visible)]="sidebarVisible3" position="top">
+        <h3>Top Sidebar</h3>
+      </p-sidebar>
+
+      <p-sidebar [(visible)]="sidebarVisible4" position="bottom">
+        <h3>Bottom Sidebar</h3>
+      </p-sidebar>
+
+      <p-button
+        type="button"
+        class="mr-2"
+        (click)="sidebarVisible1 = true"
+        icon="pi pi-arrow-right"
+      ></p-button>
+      <p-button
+        type="button"
+        class="mr-2"
+        (click)="sidebarVisible2 = true"
+        icon="pi pi-arrow-left"
+      ></p-button>
+      <p-button
+        type="button"
+        class="mr-2"
+        (click)="sidebarVisible3 = true"
+        icon="pi pi-arrow-down"
+      ></p-button>
+      <p-button
+        type="button"
+        class="mr-2"
+        (click)="sidebarVisible4 = true"
+        icon="pi pi-arrow-up"
+      ></p-button>
+    </div>
+
+    <hr />
+
+    <div class="card">
+      <label flex>Full Screen</label>
+
+      <p-sidebar [(visible)]="sidebarVisible7" [fullScreen]="true">
+        <h3>Full Screen Sidebar</h3>
+      </p-sidebar>
+      <p-button
+        (click)="sidebarVisible7 = true"
+        icon="pi pi-th-large"
+      ></p-button>
+    </div>
+
+    <hr />
+
+    <div class="card">
+      <label flex>Size</label>
+
+      <p-sidebar [(visible)]="sidebarVisible5" styleClass="w-30rem">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </p-sidebar>
+      <p-button
+        (click)="sidebarVisible5 = true"
+        icon="pi pi-arrow-right"
+      ></p-button>
+    </div>
+
+    <hr />
+
+    <div class="card">
+      <label flex>Template</label>
+
+      <p-sidebar [(visible)]="sidebarVisible6" [fullScreen]="true">
+        <h3>Full Screen Sidebar</h3>
+      </p-sidebar>
+      <p-button
+        (click)="sidebarVisible6 = true"
+        icon="pi pi-th-large"
+      ></p-button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div column gap-30>
+  <div class="card">
+    <label flex>Basic</label>
+
+    <p-galleria
+      [value]="images"
+      [responsiveOptions]="responsiveOptions"
+      [containerStyle]="{ 'max-width': '640px' }"
+      [numVisible]="5"
+    >
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item.itemImageSrc" style="width: 100%" />
+      </ng-template>
+      <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+          <img [src]="item.thumbnailImageSrc" />
+        </div>
+      </ng-template>
+    </p-galleria>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label flex>Indicator</label>
+
+    <p-galleria
+      [value]="images"
+      [showIndicators]="true"
+      [showThumbnails]="false"
+      [responsiveOptions]="responsiveOptions"
+      [containerStyle]="{ 'max-width': '640px' }"
+    >
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item.itemImageSrc" style="width: 100%; display: block" />
+      </ng-template>
+    </p-galleria>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label flex>Indicator Hover Event</label>
+
+    <p-galleria
+      [value]="images"
+      [showIndicators]="true"
+      [showThumbnails]="false"
+      [changeItemOnIndicatorHover]="true"
+      [responsiveOptions]="responsiveOptions"
+      [containerStyle]="{ 'max-width': '640px' }"
+    >
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item.itemImageSrc" style="width: 100%; display: block" />
+      </ng-template>
+    </p-galleria>
+  </div>
+</div>

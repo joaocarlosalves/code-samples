@@ -1,0 +1,95 @@
+<div column gap-30>
+  <div class="card">
+    <label flex>Basic</label>
+
+    <div flex gap-20>
+      <p-button label="Submit"></p-button>
+
+      <button
+        pButton
+        pRipple
+        label="Submit"
+        class="p-button-success"
+      ></button>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <label flex>Icons</label>
+
+    <div flex gap-20>
+      <p-button icon="pi pi-check"></p-button>
+      <p-button label="Submit" icon="pi pi-check"></p-button>
+      <p-button
+        label="Submit"
+        icon="pi pi-check"
+        iconPos="right"
+      ></p-button>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <label flex>Loading</label>
+
+    <div flex gap-20>
+      <p-button
+        label="Submit"
+        [loading]="loading"
+        (onClick)="load()"
+      ></p-button>
+
+      <p-button
+        label="Loading custom icon"
+        [loading]="loading"
+        loadingIcon="pi pi-bell"
+        (onClick)="load()"
+      ></p-button>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <label flex>Severity</label>
+
+    <div column gap-20>
+      <div flex gap-20>
+        <p-button label="Primary"></p-button>
+        <button label="Secondary" pButton pRipple class='p-ripple p-element p-button p-component p-button-secondary'></button>
+        <button label="Success" pButton pRipple class='p-ripple p-element p-button p-component p-button-success'></button>
+        <button label="Info" pButton pRipple class='p-ripple p-element p-button p-component p-button-info'></button>
+      </div>
+
+      <div flex gap-20>
+        <button label="Warning" pButton pRipple class='p-ripple p-element p-button p-component p-button-warning'></button>
+        <button label="Help" pButton pRipple class='p-ripple p-element p-button p-component p-button-help'></button>
+        <button label="Danger" pButton pRipple class='p-ripple p-element p-button p-component p-button-danger'></button>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <label flex>Rounded</label>
+
+    <div column gap-20>
+      <div flex gap-20>
+        <button label="Secondary" pButton pRipple class='p-button-rounded p-ripple p-element p-button p-component p-button-primary'></button>
+        <button label="Secondary" pButton pRipple class='p-button-rounded p-ripple p-element p-button p-component p-button-secondary'></button>
+        <button label="Success" pButton pRipple class='p-button-rounded p-ripple p-element p-button p-component p-button-success'></button>
+        <button label="Info" pButton pRipple class='p-button-rounded p-ripple p-element p-button p-component p-button-info'></button>
+      </div>
+
+      <div flex gap-20>
+        <button label="Warning" pButton pRipple class='p-button-rounded p-ripple p-element p-button p-component p-button-warning'></button>
+        <button label="Help" pButton pRipple class='p-button-rounded p-ripple p-element p-button p-component p-button-help'></button>
+        <button label="Danger" pButton pRipple class='p-button-rounded p-ripple p-element p-button p-component p-button-danger'></button>
+      </div>
+    </div>
+  </div>
+</div>

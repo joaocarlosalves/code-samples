@@ -1,0 +1,103 @@
+<div column gap-20>
+  <div flex gap-20>
+    <div column gap-20>
+      <div class="card">
+        <label class="flex">Basic</label>
+
+        <p-multiSelect
+          [options]="cities"
+          [(ngModel)]="selectedCities"
+          optionLabel="name"
+        ></p-multiSelect>
+      </div>
+
+      <div class="card">
+        <label class="flex">Chips</label>
+
+        <p-multiSelect
+          [options]="cities"
+          [(ngModel)]="selectedCities"
+          defaultLabel="Select a City"
+          optionLabel="name"
+          display="chip"
+        ></p-multiSelect>
+      </div>
+
+      <div class="card">
+        <label class="flex">Group</label>
+
+        <p-multiSelect
+          [options]="groupedCities"
+          [group]="true"
+          [(ngModel)]="selectedCities"
+          defaultLabel="Select a City"
+          scrollHeight="250px"
+          display="chip"
+        >
+          <ng-template let-group pTemplate="group">
+            <div class="flex align-items-center" gap-10>
+              <img
+                src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png"
+                [class]="'mr-2 flag flag-' + group.value"
+                style="width: 20px"
+              />
+              <span>{{ group.label }}</span>
+            </div>
+          </ng-template>
+        </p-multiSelect>
+      </div>
+    </div>
+
+    <div column gap-20>
+      <div class="card">
+        <label class="flex">Template</label>
+
+        <p-multiSelect
+          [options]="countries"
+          [(ngModel)]="selectedCountries"
+          defaultLabel="Select a Country"
+          optionLabel="name"
+        >
+          <ng-template let-value pTemplate="selectedItems">
+            <div
+              class="flex align-items-center gap-2"
+              gap-10
+              *ngFor="let option of selectedCountries"
+            >
+              <img
+                src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png"
+                [class]="'flag flag-' + option.code.toLowerCase()"
+                style="width: 18px"
+              />
+              <div>{{ option.name }}</div>
+            </div>
+            <div *ngIf="!selectedCountries || selectedCountries.length === 0">
+              Select Countries
+            </div>
+          </ng-template>
+          <ng-template let-country pTemplate="item">
+            <div class="flex align-items-center gap-2" gap-10>
+              <img
+                src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png"
+                [class]="'flag flag-' + country.code.toLowerCase()"
+                style="width: 18px"
+              />
+              <div>{{ country.name }}</div>
+            </div>
+          </ng-template>
+        </p-multiSelect>
+      </div>
+
+      <div class="card">
+        <label class="flex">Filter</label>
+
+        <p-multiSelect
+          [options]="cities"
+          [(ngModel)]="selectedCities"
+          [filter]="true"
+          optionLabel="name"
+        ></p-multiSelect>
+      </div>
+    </div>
+  </div>
+</div>

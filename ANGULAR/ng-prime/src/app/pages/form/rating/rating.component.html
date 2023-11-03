@@ -1,0 +1,73 @@
+<div column gap-20>
+  <div class="card">
+    <label flex>Basic</label>
+
+    <p-rating [(ngModel)]="value"></p-rating>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <label flex>Reactive Forms</label>
+
+    <form [formGroup]="formGroup">
+      <p-rating formControlName="value"></p-rating>
+    </form>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <label flex>Number of Stars</label>
+
+    <p-rating [(ngModel)]="value" [stars]="10"></p-rating>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <label flex>Template</label>
+
+    <p-rating [(ngModel)]="value" [stars]="5">
+      <ng-template pTemplate="cancel">
+        <img
+          src="https://primefaces.org/cdn/primeng/images/demo/rating/cancel.png"
+          width="25px"
+          height="25px"
+        />
+      </ng-template>
+      <ng-template pTemplate="onicon">
+        <img
+          src="https://primefaces.org/cdn/primeng/images/demo/rating/custom-icon-active.png"
+          width="25px"
+          height="25px"
+        />
+      </ng-template>
+      <ng-template pTemplate="officon">
+        <img
+          src="https://primefaces.org/cdn/primeng/images/demo/rating/custom-icon.png"
+          width="25px"
+          height="25px"
+        />
+      </ng-template>
+    </p-rating>
+  </div>
+
+  <hr>
+
+  <div class="card=">
+    <label flex>ReadOnly</label>
+
+    <p-rating [(ngModel)]="value" [readonly]="true" [cancel]="false"></p-rating>
+  </div>
+
+  <hr>
+
+  <div class="card=">
+    <label flex>Disabled</label>
+
+    <p-rating [(ngModel)]="value" [disabled]="true" [cancel]="false"></p-rating>
+  </div>
+
+  <br>
+</div>

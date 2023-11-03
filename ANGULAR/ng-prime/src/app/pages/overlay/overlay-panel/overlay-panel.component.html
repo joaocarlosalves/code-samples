@@ -1,0 +1,59 @@
+<div column gap-20>
+  <div column gap-20>
+    <div class="card">
+      <label flex>Basic</label>
+      <p-overlayPanel #op>
+        <img
+          src="https://primefaces.org/cdn/primeng/images/demo/product/bamboo-watch.jpg"
+          alt="product"
+        />
+      </p-overlayPanel>
+      <p-button
+        (click)="op.toggle($event)"
+        icon="pi pi-image"
+        label="Show"
+      ></p-button>
+    </div>
+
+    <hr />
+
+    <div class="card">
+      <label flex>Target</label>
+
+      <p-button
+        (click)="op.show($event, targetEl)"
+        icon="pi pi-image"
+        label="Show"
+      ></p-button>
+      <div
+        #targetEl
+        class="mt-5 w-10rem h-5rem border-1 surface-border border-round flex align-items-center justify-content-center"
+      >
+        <span>Target Element</span>
+      </div>
+      <p-overlayPanel #op>
+        <img
+          src="https://primefaces.org/cdn/primeng/images/demo/product/bamboo-watch.jpg"
+          alt="product"
+        />
+      </p-overlayPanel>
+    </div>
+
+    <hr />
+
+    <div class="card">
+      <label flex>Template</label>
+
+      <p-overlayPanel #op>
+        <ng-template pTemplate="content">
+          <h4>Custom Content</h4>
+        </ng-template>
+      </p-overlayPanel>
+      <p-button
+        (click)="op.toggle($event)"
+        icon="pi pi-image"
+        label="Show"
+      ></p-button>
+    </div>
+  </div>
+</div>

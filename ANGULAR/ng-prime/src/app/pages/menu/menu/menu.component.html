@@ -1,0 +1,34 @@
+<div column gap-20>
+  <div column gap-20>
+    <div class="card">
+      <label flex>Basic</label>
+
+      <p-menu [model]="items[0]"></p-menu>
+    </div>
+
+    <hr />
+
+    <div class="card">
+      <label flex>Group</label>
+
+      <p-toast></p-toast>
+      <p-menu [model]="items[1]"></p-menu>
+    </div>
+
+    <hr />
+
+    <div class="card">
+      <label flex>Popup</label>
+
+      <p-toast></p-toast>
+      <p-menu #menu [model]="items[1]" [popup]="true"></p-menu>
+      <button
+        pButton
+        type="button"
+        (click)="menu.toggle($event)"
+        icon="pi pi-bars"
+        label="Show"
+      ></button>
+    </div>
+  </div>
+</div>

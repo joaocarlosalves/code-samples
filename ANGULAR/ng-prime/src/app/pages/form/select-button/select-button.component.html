@@ -1,0 +1,91 @@
+<div column gap-20>
+  <div flex gap-30>
+    <div column gap-20>
+      <div class="card">
+        <label flex>Basic</label>
+
+        <p-selectButton
+          [options]="stateOptions"
+          [(ngModel)]="value"
+          optionLabel="label"
+          optionValue="value"
+        ></p-selectButton>
+      </div>
+
+      <div class="card">
+        <label flex>Reactive Forms</label>
+
+        <form [formGroup]="formGroup">
+          <p-selectButton
+            [options]="stateOptions"
+            formControlName="value"
+            optionLabel="label"
+            optionValue="value"
+          ></p-selectButton>
+        </form>
+      </div>
+
+      <div class="card">
+        <label flex>Multiple</label>
+
+        <p-selectButton
+          [options]="paymentOptions"
+          [(ngModel)]="value"
+          [multiple]="true"
+          optionLabel="name"
+          optionValue="value"
+        ></p-selectButton>
+      </div>
+
+      <div class="card">
+        <label flex>Template</label>
+
+        <p-selectButton
+          [options]="justifyOptions"
+          [(ngModel)]="value"
+          optionLabel="icon"
+        >
+          <ng-template let-item pTemplate>
+            <i [class]="item.icon"></i>
+          </ng-template>
+        </p-selectButton>
+      </div>
+    </div>
+
+    <div column gap-20>
+      <div class="card">
+        <label flex>Invalid</label>
+
+        <p-selectButton
+          [options]="stateOptions"
+          [(ngModel)]="value"
+          optionLabel="label"
+          optionValue="value"
+          class="ng-invalid ng-dirty"
+        ></p-selectButton>
+      </div>
+
+      <div class="card">
+        <label flex>Disabled</label>
+
+        <p-selectButton
+          [options]="stateOptions"
+          [(ngModel)]="value1"
+          optionLabel="label"
+          optionValue="value"
+          [disabled]="true"
+        ></p-selectButton>
+
+        <br />
+
+        <p-selectButton
+          [options]="stateOptions2"
+          [(ngModel)]="value2"
+          optionLabel="label"
+          optionValue="value"
+          optionDisabled="constant"
+        ></p-selectButton>
+      </div>
+    </div>
+  </div>
+</div>

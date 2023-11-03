@@ -1,0 +1,44 @@
+<div column gap-30>
+  <div class="card">
+    <label flex>Basic</label>
+
+    <p-splitter [style]="{ height: '300px' }" styleClass="mb-5">
+      <ng-template pTemplate>
+          <div class="col flex align-items-center justify-content-center">Panel 1</div>
+      </ng-template>
+      <ng-template pTemplate>
+          <div class="col flex align-items-center justify-content-center">Panel 2</div>
+      </ng-template>
+    </p-splitter>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <label flex>Size</label>
+
+    <p-splitter [panelSizes]="[25, 75]" [style]="{ height: '300px' }" styleClass="mb-5">
+      <ng-template pTemplate>
+          <div class="col flex align-items-center justify-content-center">Panel 1</div>
+      </ng-template>
+      <ng-template pTemplate>
+          <div class="col flex align-items-center justify-content-center">Panel 2</div>
+      </ng-template>
+    </p-splitter>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <label flex>Vertical</label>
+
+    <p-splitter [style]="{ height: '300px' }" styleClass="mb-5" layout="vertical">
+      <ng-template pTemplate>
+          <div class="col flex align-items-center justify-content-center">Panel 1</div>
+      </ng-template>
+      <ng-template pTemplate>
+          <div class="col flex align-items-center justify-content-center">Panel 2</div>
+      </ng-template>
+    </p-splitter>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+<div column gap-30>
+  <div class="card">
+    <label flex>Basic</label>
+
+    <div flex gap-20>
+      <p-chip label="Action"></p-chip>
+      <p-chip label="Comedy"></p-chip>
+      <p-chip label="Mystery"></p-chip>
+      <p-chip label="Thriller" [removable]="true"></p-chip>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label flex>Icon</label>
+
+    <div flex gap-20>
+      <p-chip label="Rotten Fruit" icon="pi pi-apple"></p-chip>
+      <p-chip label="Losing Time" icon="pi pi-facebook"></p-chip>
+      <p-chip label="Control us" icon="pi pi-google"></p-chip>
+      <p-chip
+        label="Money Eater"
+        icon="pi pi-microsoft"
+        [removable]="true"
+      ></p-chip>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label flex>Image</label>
+
+    <div flex gap-20>
+      <p-chip
+        label="Amy Elsner"
+        image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+      ></p-chip>
+      <p-chip
+        label="Asiya Javayant"
+        image="https://primefaces.org/cdn/primeng/images/demo/avatar/asiyajavayant.png"
+      ></p-chip>
+      <p-chip
+        label="Onyama Limba"
+        image="https://primefaces.org/cdn/primeng/images/demo/avatar/onyamalimba.png"
+      ></p-chip>
+      <p-chip
+        label="Xuxue Feng"
+        image="https://primefaces.org/cdn/primeng/images/demo/avatar/xuxuefeng.png"
+        [removable]="true"
+      ></p-chip>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label flex>Custom Content</label>
+
+    <p-chip>
+      <div class="p-2">Content</div>
+    </p-chip>
+  </div>
+</div>

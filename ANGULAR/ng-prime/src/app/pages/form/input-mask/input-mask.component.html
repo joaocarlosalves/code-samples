@@ -1,0 +1,110 @@
+<div flex gap-30>
+  <div column>
+    <div class="card">
+      <label class="flex">Basic Input Mask</label>
+      <p-inputMask
+        mask="99-999999"
+        [(ngModel)]="value"
+        placeholder="99-999999"
+      ></p-inputMask>
+    </div>
+
+    <br />
+
+    <div class="card">
+      <label class="flex">SSN</label>
+      <p-inputMask
+        mask="999-99-9999"
+        [(ngModel)]="value1"
+        placeholder="999-99-9999"
+      ></p-inputMask>
+    </div>
+
+    <br />
+
+    <div class="card">
+      <label class="flex">Phone</label>
+      <p-inputMask
+        mask="(999) 999-9999"
+        [(ngModel)]="value2"
+        placeholder="(999) 999-9999"
+      ></p-inputMask>
+    </div>
+  </div>
+
+  <div column>
+    <div class="card">
+      <label class="flex">Serial Number</label>
+
+      <p-inputMask
+        mask="a*-999-a999"
+        [(ngModel)]="value3"
+        placeholder="a*-999-a999"
+      ></p-inputMask>
+    </div>
+
+    <br />
+
+    <div class="card">
+      <label class="flex">Slot Char</label>
+
+      <p-inputMask
+        [(ngModel)]="value"
+        mask="99/99/9999"
+        placeholder="99/99/9999"
+        slotChar="mm/dd/yyyy"
+      ></p-inputMask>
+    </div>
+
+    <br />
+
+    <div class="card">
+      <label class="flex">Optional</label>
+
+      <p-inputMask
+        mask="(999) 999-9999? x99999"
+        [(ngModel)]="value"
+        placeholder="(999) 999-9999? x99999"
+      ></p-inputMask>
+    </div>
+  </div>
+
+  <div column>
+    <div class="card">
+      <label class="flex">Disabled</label>
+
+      <p-inputMask
+        mask="999-99-9999"
+        [(ngModel)]="value"
+        [disabled]="true"
+      ></p-inputMask>
+    </div>
+
+    <br />
+
+    <div class="card">
+      <label class="flex">Invalid</label>
+
+      <p-inputMask
+        mask="999-99-9999"
+        [(ngModel)]="value"
+        class="ng-invalid ng-dirty"
+      ></p-inputMask>
+    </div>
+
+    <br /><br />
+
+    <div class="card">
+      <span class="p-float-label">
+        <p-inputMask
+          mask="999-99-9999"
+          [(ngModel)]="value"
+          id="ssn_input"
+        ></p-inputMask>
+        <label htmlFor="ssn_input">SSN (Float Label)</label>
+      </span>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,33 @@
+<div column gap-20>
+  <div flex gap-30>
+    <div column gap-20>
+      <div class="card" style="width: 200px">
+        <label flex>Basic</label>
+
+        <p-slider [(ngModel)]="value"></p-slider>
+      </div>
+
+      <div column style="width: 200px" gap-5>
+        <label flex>Input</label>
+
+        <input style="margin-bottom: 5px" type="text" pInputText [(ngModel)]="value" class="p-inputtext p-component p-element w-full" />
+
+        <p-slider [(ngModel)]="value" [step]="20"></p-slider>
+      </div>
+
+      <div column style="width: 200px" gap-5>
+        <label flex>Range</label>
+
+        <p-slider [(ngModel)]="rangeValues" [range]="true"></p-slider>
+      </div>
+    </div>
+
+    <div column gap-20>
+      <div class="card" style="width: 200px">
+        <label flex>Vertical</label>
+
+        <p-slider [(ngModel)]="value" orientation="vertical"></p-slider>
+    </div>
+    </div>
+  </div>
+</div>

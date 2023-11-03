@@ -1,0 +1,55 @@
+<div column gap-30>
+  <div class="card">
+    <label flex>Basic</label>
+
+    <p-tree class="w-full md:w-30rem" [value]="files"></p-tree>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label flex>Controlled</label>
+    <div class="mb-3">
+      <button
+        pButton
+        type="button"
+        label="Expand all"
+        (click)="expandAll()"
+        class="mr-2"
+      ></button>
+      <button
+        pButton
+        type="button"
+        label="Collapse all"
+        (click)="collapseAll()"
+      ></button>
+    </div>
+    <p-tree [value]="files" class="w-full md:w-30rem"></p-tree>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label flex>Selection</label>
+
+    <p-tree
+      [value]="files"
+      class="w-full md:w-30rem"
+      selectionMode="single"
+      [(selection)]="selectedFile"
+    ></p-tree>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <label flex>Checkbox</label>
+
+    <p-tree
+      [value]="files"
+      selectionMode="checkbox"
+      class="w-full md:w-30rem"
+      [(selection)]="selectedFiles"
+    ></p-tree>
+  </div>
+</div>

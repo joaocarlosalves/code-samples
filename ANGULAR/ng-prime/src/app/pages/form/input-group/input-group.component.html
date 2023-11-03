@@ -1,0 +1,94 @@
+<div column gap-30>
+  <label class="flex">Basic Input Group</label>
+  <div class="card flex flex-column md:flex-row gap-3" gap-20>
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon">
+        <i class="pi pi-user"></i>
+      </span>
+      <input
+        pInputText
+        placeholder="Username"
+        class="p-inputtext p-component p-element"
+      />
+    </div>
+
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon">$</span>
+      <input
+        type="text"
+        pInputText
+        placeholder="Price"
+        class="p-inputtext p-component p-element"
+      />
+      <span class="p-inputgroup-addon">.00</span>
+    </div>
+
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon">www</span>
+      <input
+        type="text"
+        pInputText
+        placeholder="Website"
+        class="p-inputtext p-component p-element"
+      />
+    </div>
+  </div>
+
+  <hr>
+
+  <label class="flex">Multiple Input Group</label>
+  <div class="card flex">
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon">
+        <i class="pi pi-clock"></i>
+      </span>
+      <span class="p-inputgroup-addon">
+        <i class="pi pi-star-fill"></i>
+      </span>
+      <input
+        type="text"
+        pInputText
+        placeholder="Price"
+        class="p-inputtext p-component p-element"
+      />
+      <span class="p-inputgroup-addon">$</span>
+      <span class="p-inputgroup-addon">.00</span>
+    </div>
+  </div>
+
+  <hr>
+
+  <label class="flex">Button Input Group</label>
+  <div class="card flex flex-column md:flex-row gap-3" gap-20>
+    <div class="p-inputgroup">
+      <button type="button" pButton label="Search"></button>
+      <input type="text" pInputText placeholder="Keyword" />
+    </div>
+
+    <div class="p-inputgroup">
+      <input type="text" pInputText placeholder="Keyword" />
+      <button
+        type="button"
+        pButton
+        icon="pi pi-refresh"
+        styleClass="p-button-warn"
+      ></button>
+    </div>
+
+    <div class="p-inputgroup">
+      <button
+        type="button"
+        pButton
+        icon="pi pi-check"
+        styleClass="p-button-success"
+      ></button>
+      <input type="text" pInputText placeholder="Vote" />
+      <button
+        type="button"
+        pButton
+        icon="pi pi-times"
+        styleClass="p-button-danger"
+      ></button>
+    </div>
+  </div>
+</div>

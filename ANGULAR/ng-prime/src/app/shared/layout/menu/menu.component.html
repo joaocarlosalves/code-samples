@@ -1,0 +1,23 @@
+<aside>
+  <nav>
+    <ul>
+      <li *ngFor="let page of list">
+        <details open>
+        <!-- <details [open]="page == 'form' ? true : false"> -->
+          <!-- <summary [routerLink]="page.length > 1 ? page : ''">{{ page }}</summary> -->
+          <summary>{{ page }}</summary>
+          <ul>
+            <li *ngFor="let m of pages[page]">
+              <a
+                [routerLink]="page + '/' + m"
+                (click)="changeMenu(m)"
+                [class.active]="m === activeMenu">
+                {{ m.replaceAll('-', ' ') }}
+              </a>
+            </li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </nav>
+</aside>

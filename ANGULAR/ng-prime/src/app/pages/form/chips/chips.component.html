@@ -1,0 +1,40 @@
+<div column gap-30>
+  <div class="card p-fluid">
+    <label class="flex">Basic</label>
+    <p-chips [(ngModel)]="values"></p-chips>
+  </div>
+
+  <hr>
+
+  <div class="card p-fluid">
+    <label class="flex">Comma Seperator</label>
+    <p-chips
+      [(ngModel)]="values"
+      separator=","
+      placeholder="Hint: a, b, c"
+    ></p-chips>
+  </div>
+
+  <hr>
+
+  <div class="card p-fluid">
+    <label class="flex">RegExp Seperator</label>
+    <p-chips
+      [(ngModel)]="values"
+      [separator]="separatorExp"
+      placeholder="Hint: a, b c"
+    ></p-chips>
+  </div>
+
+  <hr>
+
+  <div class="card p-fluid">
+    <label class="flex">Template</label>
+    <p-chips [(ngModel)]="values">
+      <ng-template let-item pTemplate="item">
+        {{ item }} - (active) <i class="pi pi-user ml-2"></i>
+      </ng-template>
+    </p-chips>
+  </div>
+
+</div>
