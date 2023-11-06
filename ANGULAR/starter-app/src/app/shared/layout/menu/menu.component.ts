@@ -1,21 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { menu } from 'data/menu';
-import { getPage } from '../layout-utils';
 
 @Component({
   selector: 'menu',
   templateUrl: './menu.component.html'
 })
-export class MenuComponent implements OnInit {
-  activeMenu: string = '';
+export class MenuComponent   {
+  tree: boolean = false;
   page: string = '';
   pages: any = menu;
-  list: string[] = [];
+  activeMenu: string = menu[0];
+  list: any = this.tree ? Object.keys(this.pages) : this.pages;
+  @Input('tree') set setTree(t: boolean | '') { this.tree = t === '' || t }
+  @Output() getTitle = new EventEmitter();
 
-  ngOnInit() {
-    this.activeMenu = getPage();
-    this.list = Object.keys(this.pages);
+  changeMenu(menu: string) {
+    this.activeMenu = menu;
+    this.getTitle.emit(menu);
   }
-
-  changeMenu(menu: string) { this.activeMenu = menu }
 }

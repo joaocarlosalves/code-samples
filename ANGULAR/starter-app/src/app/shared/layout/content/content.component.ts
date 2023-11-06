@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { pageTitle } from '../layout-utils';
 
 @Component({
@@ -6,7 +6,7 @@ import { pageTitle } from '../layout-utils';
   templateUrl: './content.component.html'
 })
 export class ContentComponent implements OnInit {
-  page: string = '';
+  @Input() page: string = '';
 
   ngOnInit() { this.page = pageTitle() }
 }

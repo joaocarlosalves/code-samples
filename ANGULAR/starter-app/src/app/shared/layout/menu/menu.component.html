@@ -1,13 +1,13 @@
-<aside>
-  <nav>
-    <ul>
+<nav>
+  <ul>
+    <ng-container *ngIf="tree">
       <li *ngFor="let page of list">
-        <details [open]="page == 'button' ? true : false">
+        <details>
           <summary>{{ page }}</summary>
           <ul>
             <li *ngFor="let m of pages[page]">
               <a
-                [routerLink]="page + '/' + m"
+                [routerLink]="'/' + m"
                 (click)="changeMenu(m)"
                 [class.active]="m === activeMenu">
                 {{ m.replaceAll('-', ' ') }}
@@ -16,6 +16,17 @@
           </ul>
         </details>
       </li>
-    </ul>
-  </nav>
-</aside>
+    </ng-container>
+
+    <ng-container *ngIf="!tree">
+      <li *ngFor="let m of pages">
+        <a
+          [routerLink]="'/' + m"
+          (click)="changeMenu(m)"
+          [class.active]="m === activeMenu">
+          {{ m.replaceAll('-', ' ') }}
+        </a>
+      </li>
+    </ng-container>
+  </ul>
+</nav>

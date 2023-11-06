@@ -10,19 +10,16 @@ export class LayoutComponent {
   page: string = '';
   pages: any = menu;
   list: string[] = [];
+  title: string = '';
 
   ngOnInit() {
-    this.activeMenu = this.getPage();
-    //this.pageTitle();
-    this.list = Object.keys(this.pages);
+    this.getPage();
+    this.setList();
   }
 
-  changeMenu(menu: string) {
-    setTimeout(() => this.pageTitle(), 10)
-    this.activeMenu = menu;
-  }
+  setList() { this.list = Object.keys(this.pages) }
 
-  getPage() { return window.location.pathname.split('/').splice(1)[1] }
+  getPage() { this.activeMenu = window.location.pathname.split('/').splice(1)[1] }
 
-  pageTitle() { this.page = this.getPage().toUpperCase() }
+  setTitle(event: any) { this.title = event.replaceAll('-', ' ') }
 }

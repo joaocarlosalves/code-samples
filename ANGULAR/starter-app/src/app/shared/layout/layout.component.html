@@ -1,4 +1,8 @@
 <main>
-  <menu></menu>
-  <content></content>
+  <aside>
+    <div>LOGO</div>
+    <menu (getTitle)="setTitle($event)"></menu>
+  </aside>
+
+  <content [page]="title"></content>
 </main>
