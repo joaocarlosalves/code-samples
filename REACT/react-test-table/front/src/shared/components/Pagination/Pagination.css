@@ -1,0 +1,28 @@
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0
+}
+.pagination ul {
+    justify-content: space-between;
+    gap: 5px
+}
+.pagination ul, .pagination ul li {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+.pagination ul li {
+    justify-content: center;
+    transition: all .2s ease;
+    color: var(--bg);
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    font-weight: bold;
+    cursor: pointer
+}
+.dark .pagination ul li { color: var(--color) }
+.pagination ul li:hover, .pagination ul li.pg-act { color: orange }

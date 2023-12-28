@@ -1,0 +1,44 @@
+[
+  {
+    "title": "The sun’s searing radiation led to the shuffling of the solar system’s planets",
+    "link": "https://www.sciencenews.org/article/sun-radiation-solar-system-planet-orbit-astronomy",
+    "author": "Science News",
+    "id": 1
+  },
+  {
+    "title": "Should Earthlings blast out our location to the cosmos?",
+    "link": "https://astronomy.com/news/2022/05/should-earthlings-blast-out-our-location-to-the-cosmos",
+    "author": "Astronomy",
+    "id": 2
+  },
+  {
+    "title": "Valneva COVID-19 vaccine: What do we know about it?",
+    "link": "https://www.medicalnewstoday.com/articles/valneva-covid-19-vaccine-what-do-we-know-about-it",
+    "author": "Medical News Today",
+    "id": 3
+  },
+  {
+    "title": "Clearpath Announces TurtleBot 4",
+    "author": "IEEE Spectrum",
+    "link": "https://spectrum.ieee.org/turtlebot-4",
+    "id": 4
+  },
+  {
+    "title": "Astronomers have found the closest known black hole to Earth",
+    "author": "Science News",
+    "link": "https://www.sciencenews.org/article/closest-known-black-hole-to-earth",
+    "id": 5
+  },
+  {
+    "title": "Embryos appear to reverse their biological clock early in development",
+    "author": "Science News",
+    "link": "https://www.sciencenews.org/article/embryos-biological-clock-development",
+    "id": 6
+  },
+  {
+    "title": "Colorful frogs downed by disease are making a surprising comeback",
+    "author": "Science Org",
+    "link": "https://www.science.org/content/article/colorful-frogs-downed-disease-are-making-surprising-comeback",
+    "id": 7
+  }
+]

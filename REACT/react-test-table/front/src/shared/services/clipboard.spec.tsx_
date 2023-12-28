@@ -1,0 +1,6 @@
+/* import { describe, it, expect } from 'vitest';
+import { clip } from './clipboard'; 
+
+describe('clip function', () => {
+
+}); */

@@ -1,0 +1,26 @@
+.avatar {
+    border: 1px solid var(--gray-2);
+    border-radius: 200px;
+    padding: 5px 10px 5px 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px
+}
+.avatar span { 
+    font-weight: bold; 
+    margin-top: -3px; 
+    color: var(--bg)
+}
+.dark .avatar span { color: var(--color) }
+.avatar .img-ct {
+    height: 40px;
+    width: 40px;
+    border-radius: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.avatar .img-ct img { height: 50px }

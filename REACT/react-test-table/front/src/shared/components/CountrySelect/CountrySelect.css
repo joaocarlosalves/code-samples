@@ -1,0 +1,36 @@
+.country-list {
+    height: 320px;
+    overflow-y: auto;
+}
+.dark .country-list {
+    color: var(--color);
+    background-color: var(--bg)
+}
+.light .country-list {
+    background-color: var(--color);
+    color: var(--bg)
+}
+.dark button {
+    color: var(--bg);
+    background-color: var(--color)
+}
+.country-list ul { padding-right: 20px }
+.country-list ul li { 
+   gap: 10px;
+   padding: 5px 20px 5px 10px;
+   cursor: pointer;
+   transition: all .2s ease;
+   display: flex
+}
+.country-list ul li:hover, .selected-country {
+    background-color: var(--color);
+    border-radius: 20px;
+    padding-left: 20px
+}
+.light .country-list ul li:hover, .light .selected-country {
+    background-color: var(--gray-2);
+    color: var(--bg)
+}
+.dark .country-list ul li:hover, .dark .selected-country { background-color: var(--gray-7) }
+.country-list ul li span { font-size: 17px }
+.country-list ul li img { width: 22px; border-radius: 10px }
